@@ -94,7 +94,9 @@ Zu Beginn unseres Projekts haben wir hauptsächlich jede Woche freitags im Schü
 Das EEG-Gerät (Elektroenzephalographie-Gerät) wurde bereits im Jahr 1929 durch H. Berger entwickelt und wird bis heute beispielsweise bei der Hirntoddiagnostik oder der Diagnose von Epilepsien eingesetzt. Es wird dabei die Spannungsdifferenz zwischen zwei Elektroden gemessen bzw. abgeleitet. Das OpenBCI-System ist auf eine sogenannte Referenzableitung bzw. unipolare Referenzschaltung ausgelegt. Das bedeutet, dass die spannungsaktiven Elektroden auf dem Kopf mit einer elektrisch inaktiven Referenzelektrode verglichen werden. Diese kann mittig auf dem Kopf oder am Ohr platziert werden. Theoretisch könnte man die Referenzelektrode auch unterhalb des Kopfes anbringen, dabei bekäme man allerdings Probleme mit sogenannten Artefakten. Artefakte sind Messdaten, die nicht durch Hirnaktivität entstehen, beispielsweise durch die Bewegung eines Armes oder statische Ladungen, welche unter anderem durch Reibung des Arms auf einem Pullover entstehen können. Wir haben aus diesem Grund unsere Referenzelektroden am Ohr platziert. Eigentlich ist vorgesehen, dass je Gehirnhälfte eine Referenzelektrode getragen wird, allerdings hatte das OpenBCI-System Probleme mit dem Erkennen von zwei Ohrelektroden. Deshalb haben wir beschlossen diese zusammenzuschließen und nun gemeinsam für alle Elektroden auf dem Kopf zu verwenden. Der Vorteil in der unipolaren Referenzschaltung liegt darin, dass die Amplituden der einzelnen Ableitpunkte besser miteinander zu vergleichen sind bzw. einzeln ausgegeben werden, was für die Funktion der künstlichen Intelligenz (KI) besser ist. Der Nachteil liegt darin, dass Artefakte häufiger und stärker auftreten können. Da wir uns beim Trainieren der KI so wenig wie möglich bewegen, sollte dies dabei allerdings kaum ein Problem darstellen. Bei einer späteren Verwendung wird die KI Artefakte größtenteils ignorieren, da immer mehrere Datenreihen gleichzeitig verarbeitet werden.
 </p>
 
+
 ### **Platzierung der Elektroden**
+
 
 <image src="2020-01-12_Langfassung_WEB_html_8974670a.png"  width="40%" id="unipol">
 
@@ -102,7 +104,9 @@ Das EEG-Gerät (Elektroenzephalographie-Gerät) wurde bereits im Jahr 1929 durch
 Je weiter die Elektroden auf dem Kopf voneinander entfernt sind, desto höher sind die Spannungsdifferenzen . Aus diesem Grund sollten die Elektroden alle ungefähr denselben Abstand voneinander haben. Von OpenBCI wird für die Platzierung der Elektroden das 10-20-System nach Jaspers  vorgeschlagen, welches international gültig ist. Nach einigen Recherchen haben wir uns dazu entschieden, dieses System so zu übernehmen, da für uns so die genausten Ableitungen möglich sind. Das 10-20-System bekommt seinen Namen durch die Art und Weise wie die Elektroden auf dem Kopf platziert werden. So wird der Kopf in Prozentabschnitte aufgeteilt. Dies findet im Groben zum einen vom Nasion zum Inion statt, zum anderen vom linken bis zum rechten Ohr. Die Elektroden werden nun vom ausgehend Nasion in Richtung der Ohren bis zum Inion verteilt. Dies geschieht zuerst in einem Abschnitt von 10%, anschließend vier Mal 20% und zu guter Letzt noch einmal 10%. So kommen je Kopfseite (rechts und links) 100% zusammen. Dasselbe geschieht bei den Elektroden, die vom Nasion über den Kopf Richtung Inion platziert werden. Genauso verfährt man bei den Elektroden, die vom linken zum rechten Ohr verteilt werden. Die CZ, T7, und T8-Elektroden werden dabei mehrfach bedacht. Zwischen diesen Elektroden können im Abstand von 10% oder 20% weitere Elektroden platziert werden. Wir haben Elektroden an folgenden Positionen platziert und als beistehenden Kanal festgelegt (Hierbei steht F = frontal, Z = Zentral, T = temporal, P = parietal, O = okzipital, K = Kanal auf Board): Fp1-K1, Fp2-K2, F7-K9, F8-K10, T7-K13, T8-K14, P7-K5, P8-K6, O1-K7, O2-K8, F3-K11, F4-K12, C3-K3, C4-K4, P3-K15, P4-K16. Unsere Elektroden sind also um den Kopf herum und auf halber Höhe zwischen Ohren und der Oberseite des Kopfes angebracht.
 </p>
 
+
 ***
+
 
 **Bau und Aufbau des EEG-Gerätes**
 ----------------------------------
@@ -119,7 +123,9 @@ Nachdem wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen und 
 
 <image src="2020-01-12_Langfassung_WEB_html_e60dad19.jpg" width="40%" id="unipol">
 
+<p style="text-align: justify">
 Unser zweites EEG-Gerät besteht zu rund 70% aus Teilen, die mit dem 3D-Drucker angefertigt wurden. Die dafür benötigten Modelle sind über die Webseite von OpenBCI frei verfügbar. Nachdem wir das Grundgerüst für das EEG-Gerät hatten drucken lassen, mussten wir darin die Elektrodenhalterungen befestigen. Durch Epoxidharz bekamen diese einen festen Halt. Die Goldelektroden haben wir vorerst an der Außenseite der großen Schrauben befestigt und durch sie hindurch mit einer weiteren Metallschraube mit der speziell beschichteten Trockenelektrode verbunden. Hierbei ergab sich allerdings das Problem, dass die Leitfähigkeit der Metallschrauben weit unter dem erwarteten Wert lag, weshalb die Messwerte zu ungenau waren und viele Störsignale auftraten. Aus diesem Grund haben wir die Elektrodenhalter und Elektroden so umplatziert, dass die Goldelektrode direkt an der Trockenelektrode festgeschraubt wird. Dadurch erhalten wir nun deutlich genauere Messwerte. Für diesen Schritt kam uns zugute, dass es einfach war, die Elektroden vom Headset zu entfernen und in Einzelteile zu zerlegen. Nachdem die Goldelektrode umplatziert war, konnte man alles schnell und einfach wieder zusammenbauen.
+</p>
 
 <div class="row">
     <div class="column">
@@ -129,3 +135,19 @@ Unser zweites EEG-Gerät besteht zu rund 70% aus Teilen, die mit dem 3D-Drucker 
         <image src="2020-01-12_Langfassung_WEB_html_f7351819.jpg">
     </div>
 </div>
+
+<p style="text-align: justify">
+Die in obiger Abbildung dargestellten Elektroden bestehen aus einem Elekrodenhalter (2), der leitend beschichteten Elektrode (1) und der Goldelektrode (3), mit dem damit verbundenen Kabel. In Abb. 0-2 ist das ganze Headset mit den montierten Boards zu sehen. Bei diesem handelt es sich um das von OpenBCI frei zur Verfügung gestellte „Ultracortex Mark IV“ Headset. Die Platzierung der Elektroden erfolgt über das bereits erwähnte für elektroenzephalographische Messungen typische 10-20-Prinzip, mit dem sich Reaktionen am besten ableiten lassen
+</p>
+
+***
+
+**Entwicklung und Funktion der Software**
+-----------------------------------------
+
+### **Wahl der Programmiersprachen und Arbeitsteilung**
+
+<p style="text-align: justify">
+Zum Programmieren haben wir hauptsächlich die Programmiersprache „Python“ verwendet. Die Hauptkriterien dafür waren die nicht zu komplizierte Syntax, sodass alle Gruppenmitglieder mit der Software umgehen können sowie die Kompatibilität mit Paketen zur Nutzung von künstlicher Intelligenz. Trotz der simplen Syntax und der einfachen Befehle wurde das Programmieren größtenteils von Frederik übernommen, da dieser schon lange in Python programmiert und auch schon mit Software wie Tensorflow und SciKit-Learn gearbeitet hat.  Während wir unsere Software programmierten mussten wir außerdem häufiger auf weitere Kenntnisse in anderen Programmiersprachen, wie Java, C++, Designsprachen, wie HTML und Datenverarbeitungsprogramme, wie Matlab und Excel zurückgreifen.
+</p>
+
