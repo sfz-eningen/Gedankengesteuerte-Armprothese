@@ -1,0 +1,1114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Maximilian Menzel">
+	<META NAME="CREATED" CONTENT="20191219;800000000000">
+	<META NAME="CHANGEDBY" CONTENT="Frederik Beimgraben">
+	<META NAME="CHANGED" CONTENT="20200113;20600000000000">
+	<META NAME="AppVersion" CONTENT="16.0000">
+	<META NAME="DocSecurity" CONTENT="4">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 0.98in; margin-right: 0.98in; margin-top: 0.49in; margin-bottom: 0.49in }
+		@page:first { }
+		P { margin-bottom: 0.08in; direction: ltr; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif }
+		H1 { margin-bottom: 0in; direction: ltr; color: #2f5496; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H1.western { font-family: "Calibri Light", serif; font-size: 16pt; font-weight: normal }
+		H1.cjk { font-size: 16pt; font-weight: normal }
+		H1.ctl { font-family: ; font-size: 16pt; font-weight: normal }
+		H2 { margin-top: 0.03in; margin-bottom: 0in; direction: ltr; color: #000000; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H2.western { font-size: 12pt }
+		H2.cjk { font-family: "Arial"; font-size: 12pt }
+		H2.ctl { font-family: ; font-size: 13pt; font-weight: normal }
+		H3 { margin-top: 0.03in; margin-bottom: 0in; direction: ltr; color: #000000; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H3.western { font-size: 11pt }
+		H3.cjk { font-family: "Arial"; font-size: 11pt }
+		H3.ctl { font-family: ; font-size: 12pt; font-weight: normal }
+		H1.contents-heading-western { font-family: "Calibri Light", serif; font-size: 16pt; font-weight: normal }
+		H1.contents-heading-cjk { font-size: 16pt; so-language: de-DE; font-weight: normal }
+		H1.contents-heading-ctl { font-family: ; font-size: 16pt; font-weight: normal }
+		A:link { color: #0563c1; so-language: zxx }
+		A.sdfootnoteanc { font-size: 57% }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="de-DE" LINK="#0563c1" DIR="LTR">
+<DIV TYPE=HEADER>
+	<TABLE WIDTH=605 CELLPADDING=7 CELLSPACING=0>
+		<COL WIDTH=188>
+		<COL WIDTH=188>
+		<COL WIDTH=188>
+		<TR VALIGN=TOP>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P STYLE="margin-left: -0.08in"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P ALIGN=RIGHT STYLE="margin-right: -0.08in"><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+	<P STYLE="margin-bottom: 0.45in; line-height: 100%"><BR>
+	</P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><FONT SIZE=5 STYLE="font-size: 20pt"><B>Gedankengesteuerte
+Armprothese</B></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Ein
+Projekt von Frederik Beimgraben, Noah Ihlein und Maximilian Menzel</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><B>Kurzfassung</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Das
+Ziel unserer Arbeit ist, mithilfe eines EEG-Gerätes ein Programm
+(z.B. eine virtuelle - später reale Armprothese) mit zwei oder mehr
+Variablen anzusteuern. So könnten billige Prothesen hergestellt
+werden, welche sehr gut funktionieren, gleichzeitig aber ohne
+Operationen einsetzbar sind.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Unsere
+Arbeit setzt sich aus dem Bau eines EEG-Gerätes und dem
+Programmieren von Software, welche die Daten des EEG-Gerätes
+verarbeiten kann, zusammen. Des Weiteren entstehen eine virtuelle
+Armprothese und ein Programm, welches diese aus den verarbeiteten
+Daten des EEG-Gerätes ansteuert.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Seit
+Jugend forscht 2019 haben wir ein neues EEG-Gerät gebaut und die
+Software erweitert und verfeinert. Mithilfe von neuronalen Netzen
+können die Daten des EEG-Gerätes trotz der hohen Komplexität
+erkannt werden.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"> <SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 3.08in; left: 3.5in; width: 305px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_2dfc11bf.jpg" NAME="Grafik 3" WIDTH=305 HEIGHT=229 BORDER=0></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 3.08in; left: -0.36in; width: 343px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_f7351819.jpg" NAME="Grafik 2" WIDTH=343 HEIGHT=229 BORDER=0></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.17in; left: 1.44in; width: 327px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_9cb785b0.jpg" NAME="Grafik 352" WIDTH=327 HEIGHT=246 BORDER=0></SPAN><SPAN DIR="LTR" STYLE="float: left; width: 3.41in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746094"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	1 - Gruppenbild</I></FONT></FONT></P>
+</SPAN>
+<SPAN DIR="LTR" STYLE="float: left; width: 3.18in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746095"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	2 - Arbeitsplatz Zuhause</I></FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT>
+<SPAN DIR="LTR" STYLE="float: left; width: 3.58in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746096"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	3 - Headset</I></FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<H1 CLASS="contents-heading-western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.17in; page-break-before: always">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><B>Inhalt</B></FONT></FONT></H1>
+<DIV ID="Table of Contents1" DIR="LTR">
+	<P STYLE="margin-bottom: 0.07in"><BR><BR>
+	</P>
+</DIV>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H1 CLASS="western" ALIGN=JUSTIFY STYLE="page-break-before: always"><A NAME="_Toc29745973"></A><A NAME="_Toc29745892"></A>
+<FONT COLOR="#00000a"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>1.
+Einleitung</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<OL>
+	<OL>
+		<LI><H2 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745974"></A><A NAME="_Toc29745893"></A>
+		<FONT COLOR="#00000a">Ideenfindung</FONT></H2>
+	</OL>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Zu
+Beginn des letzten Schuljahres überlegten wir uns ein Projekt, an
+welchem wir im Schülerforschungszentrum arbeiten wollten. Wir haben
+uns verschiedene Problembereiche angesehen und wir haben gemerkt,
+dass wir gerne etwas machen möchten, was sowohl mit Menschen als
+auch mit Technik zu tun hat. Durch Zufall hat Frederik EEG-Geräte
+und deren Einsatzbereiche im Internet kennengelernt. Durch Recherche
+haben wir entdeckt, dass voll funktionsfähige (Arm-) Prothesen
+bisher nur unter speziellen Bedingungen einsetzbar sind. So müssen
+beispielsweise bei einem Unfall mit Verlust eines Armes die
+Nervenenden im Arm intakt bleiben, damit eine Prothese angeschlossen
+werden kann. Des Weiteren werden große Operationen fällig, um eine
+spezielle, extra angefertigte Armprothese mit dem Körper und Gehirn
+zu verbinden. All dies ist natürlich auch mit hohen Kosten
+verbunden. So haben wir uns dazu entschlossen, eine Armprothese zu
+bauen, welche mit den Möglichkeiten eines EEG-Gerätes arbeitet.
+Dadurch sollen alle bestehenden Probleme gelöst werden. In den
+letzten Monaten ist uns bewusst geworden, dass wir unser System nicht
+nur auf Armprothesen, sondern auf jede beliebige Art von
+elektrotechnischen Geräten übertragen können, beispielsweise
+Drohnen. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<OL>
+	<OL START=2>
+		<LI><H2 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745975"></A><A NAME="_Toc29745894"></A><A NAME="_Toc535146336"></A>
+		<FONT COLOR="#00000a">Wie möchten wir unser Vorhaben realisieren?</FONT></H2>
+	</OL>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Die
+Möglichkeit unser Projekt zu realisieren, bekommen wir durch das
+Schülerforschungszentrum in Eningen. Wir erhalten dort neben
+finanzieller Unterstützung auch Beratung von Lehrern. Außerdem
+werden wir finanziell durch das Mikro-Makro-MINT-Programm in
+Baden-Württemberg unterstützt. Des Weiteren haben wir Zugriff auf
+eine Werkstatt, Computer und auch einen 3D-Drucker. Uns stehen
+verschiedenste Arbeitsmaterialen zur Verfügung. Aufgaben, wie z.B.
+Programmieren oder Planung betreiben wir aufgrund des hohen
+Zeitaufwandes nicht nur im SFZ, sondern auch in der Schule, oder
+Zuhause über Online-Sprachchats. Durch Open-Source Projekte, wie
+OpenBCI erhalten wir einigermaßen kostengünstigen Zugriff auf
+EEG-Hardware und haben die Möglichkeit, deren Firmware einfach zu
+bearbeiten und schnell passende Software zu programmieren. Mithilfe
+des EEG-Gerätes möchten wir unsere Hirnströme während bestimmter
+Gedanken messen, um später mit diesen die Prothese anzusteuern. Die
+Daten des EEG-Gerätes werden von einer eigens programmierten
+Software geordnet. Mit diesen Daten kann dann ein neuronales Netz
+trainiert werden, das bereits trainierte und wiederholt auftretende
+Muster erkennen kann. Die Ergebnisse des neuronalen Netzes können
+schließlich zur Steuerung der Prothese genutzt werden. Da wir
+aktuell keinen Zugriff auf eine hochentwickelte bewegliche
+Armprothese haben, werden wir zunächst eine simulierte Armprothese
+oder ein Demonstrationsmodell steuern.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H1 CLASS="western" ALIGN=JUSTIFY STYLE="page-break-before: always"><A NAME="_Toc29745976"></A><A NAME="_Toc29745895"></A><A NAME="_Toc535146337"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>2.
+Vorgehensweise, Materialien und Methodik</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H2 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc535146338"></A><A NAME="_Toc29745977"></A><A NAME="_Toc29745896"></A>
+<FONT COLOR="#00000a">2.1 Unsere allgemeine Vorgehensweise</FONT></H2>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Zu
+Beginn unseres Projekts haben wir hauptsächlich jede Woche freitags
+im Schüler-Forschungs-Zentrum in Eningen gearbeitet. Dort haben wir
+Zugriff auf eine voll ausgestattete Werkstadt, Computer, 3D-Drucker
+und Arbeitsmaterialien. Nachteil ist dabei die lange An- und
+Abfahrtszeit, welche insgesamt über zwei Stunden dauert. Über viele
+Wochen hinweg hat sich die Arbeit immer weiter nach Hause oder auf
+freie Zeiten in der Schule verlagert. Vor allem beim Programmieren
+der Software waren wir nicht auf das SFZ angewiesen, über das
+Projektmanagement-Tool „Git“ konnten wir alle immer den aktuellen
+Code auf unsere Computer/Laptops laden. Über das Sprachchat-Programm
+Discord konnten wir miteinander kommunizieren. Mithilfe von
+TeamViewer konnten wir auf die Computer des anderen zugreifen und
+live sehen, was auf dem Bildschirm angezeigt wird. Dies war besonders
+nützlich, wenn Frederik, Maximilian oder Noah beim Programmieren
+geholfen hat. Aktuell arbeiten wir circa die Hälfte der Zeit von zu
+Hause aus. Unser Betreuer im SFZ hat es uns möglich gemacht, einen
+Schlüssel für das Gebäude zu bekommen, wodurch wir nicht mehr an
+Freitage gebunden sind und jederzeit das SFZ aufsuchen können. So
+ist ein Mix aus verschiedenen Arbeitsstandorten entstanden, was vor
+allem unsere Produktivität stark gefördert hat.<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 2.65in; left: 3.84in; width: 235px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_5bb9a16b.png" NAME="Grafik 28" WIDTH=235 HEIGHT=185 BORDER=0></SPAN></P>
+<H2 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745978"></A><A NAME="_Toc29745897"></A>
+<FONT COLOR="#00000a"><FONT SIZE=3 STYLE="font-size: 13pt">2.2
+Funktionsweise eines EEG-Gerätes</FONT></FONT></H2>
+<H3 CLASS="western"><A NAME="_Toc29745979"></A><A NAME="_Toc29745898"></A>
+<FONT SIZE=3>2.2.1 Allgemeines</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><A NAME="_GoBack"></A>
+Ein EEG-Gerät (Elektroenzephalographie-Gerät) wurde bereits im Jahr
+1929 durch H. Berger entwickelt und wird bis heute beispielsweise bei
+der Hirntoddiagnostik oder der Diagnose von Epilepsien eingesetzt<A CLASS="sdfootnoteanc" NAME="sdfootnote1anc" HREF="#sdfootnote1sym"><SUP>1</SUP></A>.
+Es wird dabei die Spannungsdifferenz zwischen zwei Elektroden
+gemessen bzw. abgeleitet<A CLASS="sdfootnoteanc" NAME="sdfootnote2anc" HREF="#sdfootnote2sym"><SUP>2</SUP></A>.
+Das OpenBCI-System ist auf eine sogenannte Referenzableitung bzw.
+unipolare Referenzschaltung ausgelegt. Das bedeutet, dass die
+spannungsaktiven Elektroden auf dem Kopf mit einer elektrisch
+inaktiven Referenzelektrode verglichen werden<A CLASS="sdfootnoteanc" NAME="sdfootnote3anc" HREF="#sdfootnote3sym"><SUP>3</SUP></A>.
+Diese kann mittig auf dem Kopf oder am Ohr platziert werden<A CLASS="sdfootnoteanc" NAME="sdfootnote4anc" HREF="#sdfootnote4sym"><SUP>4</SUP></A>.
+Theoretisch könnte man die Referenzelektrode auch unterhalb des
+Kopfes anbringen, dabei bekäme man allerdings Probleme mit
+sogenannten Artefakten<A CLASS="sdfootnoteanc" NAME="sdfootnote5anc" HREF="#sdfootnote5sym"><SUP>5</SUP></A>.
+Artefakte sind Messdaten, die nicht durch Hirnaktivität entstehen,
+beispielsweise durch die Bewegung eines Armes oder statische
+Ladungen, welche unter anderem durch Reibung des Arms auf einem
+Pullover entstehen können. Wir haben aus diesem Grund unsere
+Referenzelektroden am Ohr platziert. Eigentlich ist vorgesehen, dass
+je Gehirnhälfte eine Referenzelektrode getragen wird, allerdings
+hatte das OpenBCI-System Probleme mit dem Erkennen von zwei
+Ohrelektroden. Deshalb haben wir beschlossen diese
+zusammenzuschließen und nun gemeinsam für alle Elektroden auf dem
+Kopf zu verwenden. Der Vorteil in der unipolaren Referenzschaltung
+liegt darin, dass die Amplituden der einzelnen Ableitpunkte besser
+miteinander zu vergleichen sind bzw. einzeln ausgegeben werden, was
+für die Funktion der künstlichen Intelligenz (KI) besser ist. Der
+Nachteil liegt darin, dass Artefakte häufiger und stärker auftreten
+können. Da wir uns beim Trainieren der KI so wenig wie möglich
+bewegen, sollte dies dabei allerdings kaum ein Problem darstellen.
+Bei einer späteren Verwendung wird die KI Artefakte größtenteils
+ignorieren, da immer mehrere Datenreihen gleichzeitig verarbeitet
+werden.<SPAN DIR="LTR" STYLE="float: left; width: 2.17in; height: 0.28in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746097"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	4 - Unipolare Referenzschaltung</I></FONT></FONT></P>
+</SPAN>
+</P>
+<H3 CLASS="western"><FONT SIZE=3>2.2.2 Platzierung der Elektroden</FONT><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_8974670a.png" NAME="Bild 2" ALIGN=LEFT HSPACE=12 WIDTH=309 HEIGHT=358 BORDER=0><SPAN DIR="LTR" STYLE="float: left; width: 3.22in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746098"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	5 - 10-20 System nach Jaspers</I></FONT></FONT></P>
+</SPAN>
+</H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Je
+weiter die Elektroden auf dem Kopf voneinander entfernt sind, desto
+höher sind die Spannungsdifferenzen<A CLASS="sdfootnoteanc" NAME="sdfootnote6anc" HREF="#sdfootnote6sym"><SUP>6</SUP></A>.
+Aus diesem Grund sollten die Elektroden alle ungefähr denselben
+Abstand voneinander haben. Von OpenBCI wird für die Platzierung der
+Elektroden das 10-20-System nach Jaspers<A CLASS="sdfootnoteanc" NAME="sdfootnote7anc" HREF="#sdfootnote7sym"><SUP>7</SUP></A>
+vorgeschlagen, welches international gültig ist. Nach einigen
+Recherchen haben wir uns dazu entschieden, dieses System so zu
+übernehmen, da für uns so die genausten Ableitungen möglich sind.
+Das 10-20-System bekommt seinen Namen durch die Art und Weise wie die
+Elektroden auf dem Kopf platziert werden. So wird der Kopf in
+Prozentabschnitte aufgeteilt. Dies findet im Groben zum einen vom
+Nasion zum Inion statt, zum anderen vom linken bis zum rechten Ohr.
+Die Elektroden werden nun vom ausgehend Nasion in Richtung der Ohren
+bis zum Inion verteilt. Dies geschieht zuerst in einem Abschnitt von
+10%, anschließend vier Mal 20% und zu guter Letzt noch einmal 10%.
+So kommen je Kopfseite (rechts und links) 100% zusammen. Dasselbe
+geschieht bei den Elektroden, die vom Nasion über den Kopf Richtung
+Inion platziert werden. Genauso verfährt man bei den Elektroden, die
+vom linken zum rechten Ohr verteilt werden. Die C<SUB>Z</SUB>, T<SUB>7</SUB>,
+und T<SUB>8</SUB>-Elektroden werden dabei mehrfach bedacht. Zwischen
+diesen Elektroden können im Abstand von 10% oder 20% weitere
+Elektroden platziert werden. Wir haben Elektroden an folgenden
+Positionen platziert und als beistehenden Kanal festgelegt (Hierbei
+steht F = frontal, Z = Zentral, T = temporal, P = parietal, O =
+okzipital, K = Kanal auf Board): F<SUB>p1</SUB>-K1, F<SUB>p2</SUB>-K2,
+F<SUB>7</SUB>-K9, F<SUB>8</SUB>-K10, T<SUB>7</SUB>-K13, T<SUB>8</SUB>-K14,
+P<SUB>7</SUB>-K5, P<SUB>8</SUB>-K6, O<SUB>1</SUB>-K7, O<SUB>2</SUB>-K8,
+F<SUB>3</SUB>-K11, F<SUB>4</SUB>-K12, C<SUB>3</SUB>-K3, C<SUB>4</SUB>-K4,
+P<SUB>3</SUB>-K15, P<SUB>4</SUB>-K16. Unsere Elektroden sind also um
+den Kopf herum und auf halber Höhe zwischen Ohren und der Oberseite
+des Kopfes angebracht:<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 5.95in; left: 0in; width: 224px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_1f3818d2.png" NAME="Grafik 27" WIDTH=224 HEIGHT=236 BORDER=0></SPAN><SPAN DIR="LTR" STYLE="float: left; width: 2.78in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746099"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	6 - Platzierung der Elektroden auf dem Ultracortex Mk-IV</I></FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT>
+</P>
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="page-break-before: always"><A NAME="_Toc29745981"></A><A NAME="_Toc29745900"></A>
+<FONT COLOR="#00000a">2.3 Bau und Aufbau des EEG-Gerätes</FONT></H2>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Seit
+Beginn unseres Projektes haben wir zwei verschiedene EEG-Geräte
+gebaut.<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.03in; left: 3.48in; width: 261px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_938126e3.jpg" NAME="Grafik 6" WIDTH=261 HEIGHT=261 BORDER=0></SPAN><SPAN DIR="LTR" STYLE="float: left; width: 2.72in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746100"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	7 - Ganglion Board</I></FONT></FONT></P>
+</SPAN>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Das
+erste EEG-Gerät war ein einfaches Ganglion-Board mit vier Kanälen
+von OpenBCI, einem amerikanischen Unternehmen, dass sich mit der
+Entwicklung von EEG-Geräten beschäftigt und gleichzeitig
+entsprechende Bauteile verkauft. Wir bestellten uns das OpenBCI
+Ganglion-Board, Goldelektroden und Ten20-Leitpaste. Der Zusammenbau
+dieser Teile gestaltete sich als sehr einfach und es wurde zusätzlich
+nur eine Kappe zum Anbringen der Elektroden am Kopf, ein Gehäuse für
+das Board und eine Klammer benötigt, um die Referenzelektrode am Ohr
+zu befestigen. Wir haben das OpenBCI Ganglion gewählt, da es nicht
+allzu teuer, aber modifizierbar ist und ebenfalls viel frei
+verfügbarer Code zur Ansteuerung vorhanden ist. Jeder Teil der
+Firmware ist frei verfügbar und da auch die Pläne zum Herstellen
+der Boards dabei sind, könnten wir später mit unserem Code
+kompatible Boards mit mehr Kanälen selbst herstellen. Dies haben wir
+jedoch unterlassen, da es nicht sehr einfach ist, die Boards selbst
+herzustellen und wir Sorge hatten, dass darauf die Software
+möglicherweise nicht funktioniert. <IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_26c29778.png" NAME="Freihand 208" ALIGN=LEFT HSPACE=12 WIDTH=1 HEIGHT=1 BORDER=0>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Nachdem
+wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen
+und mit unserer damaligen Software zu verarbeiten, wurde uns bewusst,
+dass wir mit vier Kanälen nicht genug Daten sammeln können, um
+dauerhaft zuverlässig Messwerte zu bekommen. Aus diesem Grund
+wollten wir unser System auf ganze 32 Kanäle erweitern. Dies wäre
+jedoch ein zu großer Schritt gewesen, da man bereits mit 16 Kanälen
+sehr gut die von uns gewollte Messgenauigkeit erreichen kann. Daher
+haben wir uns dazu entschieden vorerst nur auf 16 Kanäle zu
+erweitern. Die neuen Boards kamen wieder von OpenBCI, zum einen das
+„Cyton“-Board mit 8 Kanälen und dem „Daisy“-Board, eine
+Erweiterung für das „Cyton”-Board mit 8 Kanälen. Da wir nun mit
+einer deutlich höheren Anzahl an Elektroden arbeiteten, konnten wir
+die Elektroden nicht mehr einzeln an die Kopfhaut drücken. Somit
+musste ein richtiger „Helm“ hergestellt werden, an dem die
+Elektroden befestigt werden konnten. Das EEG-Gerät wird von vier
+Handelsüblichen AA-Batterien betrieben und ist in keiner Weise an
+das Stromnetz angeschlossen.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.03in; left: 0.08in; width: 292px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_e60dad19.jpg" NAME="Grafik 8" WIDTH=292 HEIGHT=259 BORDER=0></SPAN><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><SPAN DIR="LTR" STYLE="float: left; width: 3.04in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746101"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	8 - Cyton Board mit Daisy Erweiterung</I></FONT></FONT></P>
+</SPAN><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in; page-break-before: always">
+Unser zweites EEG-Gerät besteht zu rund 70% aus Teilen, die mit dem
+3D-Drucker angefertigt wurden. Die dafür benötigten Modelle sind
+über die Webseite von OpenBCI frei verfügbar. Nachdem wir das
+Grundgerüst für das EEG-Gerät hatten drucken lassen, mussten wir
+darin die Elektrodenhalterungen befestigen. Durch Epoxidharz bekamen
+diese einen festen Halt. Die Goldelektroden haben wir vorerst an der
+Außenseite der großen Schrauben befestigt und durch sie hindurch
+mit einer weiteren Metallschraube mit der speziell beschichteten
+Trockenelektrode verbunden. Hierbei ergab sich allerdings das
+Problem, dass die Leitfähigkeit der Metallschrauben weit unter dem
+erwarteten Wert lag, weshalb die Messwerte zu ungenau waren und viele
+Störsignale auftraten. Aus diesem Grund haben wir die
+Elektrodenhalter und Elektroden so umplatziert, dass die
+Goldelektrode direkt an der Trockenelektrode festgeschraubt wird.
+Dadurch erhalten wir nun deutlich genauere Messwerte. Für diesen
+Schritt kam uns zugute, dass es einfach war, die Elektroden vom
+Headset zu entfernen und in Einzelteile zu zerlegen. Nachdem die
+Goldelektrode umplatziert war, konnte man alles schnell und einfach
+wieder zusammenbauen.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.42in; left: 3.32in; width: 293px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_f7351819.jpg" NAME="Grafik 11" WIDTH=293 HEIGHT=196 BORDER=0></SPAN><SPAN DIR="LTR" STYLE="float: left; width: 2.43in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746102"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	9 - Schraubelektrode für das Headset</I></FONT></FONT></P>
+</SPAN>
+<IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_1f6da567.gif" ALIGN=LEFT>
+<SPAN DIR="LTR" STYLE="float: left; width: 3.05in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746103"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	10 - Vollständiges Headset</I></FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Die in
+<I>Abb. 01</I> dargestellten Elektroden bestehen aus einem
+Elekrodenhalter (2), der leitend beschichteten Elektrode (1) und der
+Goldelektrode (3), mit dem damit verbundenen Kabel.                  
+        In Abb. 0-2 ist das ganze Headset mit den montierten Boards
+zu sehen. Bei diesem handelt es sich um das von OpenBCI frei zur
+Verfügung gestellte „Ultracortex Mark IV“ Headset. Die
+Platzierung der Elektroden erfolgt über das bereits erwähnte für
+elelektroenzephalographische Messungen typische 10-20-Prinzip, mit
+dem sich Reaktionen am besten ableiten lassen.<FONT SIZE=3> </FONT><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 1.28in; left: 3.52in; width: 274px"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_2633df98.jpg" NAME="Grafik 9" WIDTH=274 HEIGHT=205 BORDER=0></SPAN>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><SPAN DIR="LTR" STYLE="float: left; width: 2.85in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746104"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	11 - Aufnahme von Messdaten</I></FONT></FONT></P>
+</SPAN><BR><BR>
+</P>
+<H2 CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.17in; page-break-before: always"><A NAME="_Toc29745982"></A><A NAME="_Toc29745901"></A>
+<FONT SIZE=3 STYLE="font-size: 13pt">2.4 Entwicklung und Funktion der
+Software</FONT></H2>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745983"></A><A NAME="_Toc29745902"></A>
+<FONT SIZE=3>2.4.1 Wahl der Programmiersprachen und Arbeitsteilung</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Zum
+Programmieren haben wir hauptsächlich die Programmiersprache
+„Python“ verwendet. Die Hauptkriterien dafür waren die nicht zu
+komplizierte Syntax, sodass alle Gruppenmitglieder mit der Software
+umgehen können sowie die Kompatibilität mit Paketen zur Nutzung von
+künstlicher Intelligenz. Trotz der simplen Syntax und der einfachen
+Befehle wurde das Programmieren größtenteils von Frederik
+übernommen, da dieser schon lange in Python programmiert und auch
+schon mit Software wie Tensorflow und SciKit-Learn<A CLASS="sdfootnoteanc" NAME="sdfootnote8anc" HREF="#sdfootnote8sym"><SUP>8</SUP></A>
+gearbeitet hat.  Während wir unsere Software programmierten mussten
+wir außerdem häufiger auf weitere Kenntnisse in anderen
+Programmiersprachen, wie Java, C++, Designsprachen, wie HTML und
+Datenverarbeitungsprogramme, wie Matlab und Excel zurückgreifen.</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745984"></A><A NAME="_Toc29745903"></A>
+<FONT SIZE=3>2.4.2 Programmstruktur</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Der
+Übersichtlichkeit halber, haben wir unser Programm in
+Subbibliotheken gegliedert, die jeweils einen Aufgabenbereich, wie
+z.B. die KI-bezogenen Teile des Programms enthalten. Außerdem kann
+man so die programmierten Klassen von mehreren Scripts aus verwenden.
+Die letztendliche Programmabfolge befindet sich im Script
+„api_server.py“<A CLASS="sdfootnoteanc" NAME="sdfootnote9anc" HREF="#sdfootnote9sym"><SUP>9</SUP></A>.
+ 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Dieses
+Script startet mehrere Prozesse, die untereinander kommunizieren
+können. Außerdem erstellt und trainiert er den
+Random-Forest-Regressor (RFR) mit zuvor aufgenommenen Daten. Sobald
+alle Prozesse gestartet, und die RFRs trainiert sind, läuft das
+Script in einen Endlosschleife und wartet auf eine Unterbrechung
+durch den Nutzer, woraufhin es alle Subprozesse beenden kann. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Bei
+den gestarteten Prozessen handelt es sich genauer um einen
+Stream-Prozess, der die ankommenden Daten vom Headset umwandelt und
+speichert, sowie den API-Prozess. Der API-Prozess liest die letzten
+paar Werte reagierend auf eine Web-Anfrage aus und analysiert sie
+dann mit den zuvor im Hauptprozess erstellten RFRs. Das Ergebnis der
+Analyse wird dann als 
+<IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_6048b34c.gif" ALIGN=ABSMIDDLE HSPACE=8>
+folgender Form über eine Web-Response zurückgegeben. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_60b4dc6e.gif" ALIGN=ABSMIDDLE HSPACE=8></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"> Der
+Ablauf nachdem alle Prozesse gestartet wurden ist weiter in folgender
+Visualisierung dargestellt:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN DIR="LTR" STYLE="float: left; width: 6.25in; height: 0in; border: none; padding: 0in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.14in; line-height: 100%"><A NAME="_Toc29746105"></A>
+	<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+	12 - Programmfunktion</I></FONT></FONT></P>
+</SPAN>
+<IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_413bae35.gif" ALIGN=LEFT><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><SPAN DIR="LTR" STYLE="float: left; width: 1.03in; height: 0.41in; border: none; padding: 0.05in 0.1in; background: #ffffff">
+	<P STYLE="margin-bottom: 0.11in"><FONT COLOR="#1f3864">Response</FONT></P>
+</SPAN><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745985"></A><A NAME="_Toc29745904"></A>
+<FONT SIZE=3>2.4.3 Datensammlung und -verarbeitung</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Bei
+den Daten, die wir von unserem Headset empfangen handelt, es sich um
+die Stärke fünf verschiedener Frequenzbänder für jede einzelne
+Elektrode, die von der für Europa typischen Netzfrequenz (50 Hz),
+sowie anderen typischen Störquellen bereinigt werden. Außerdem
+werden wir in zukünftigen Versionen noch die Beschleunigungsdaten
+als Features für die RFRs einbeziehen. Zum gegenwärtigen Zeitpunkt
+verwenden wir zum Herausfiltern der Störungen und zur Umwandlung der
+Spannungswerte in Frequenzbänder noch die OpenBCI-GUI Software, da
+sich eine direkte Verbindung mit dem Board als überaus schwierig
+herausstellte. In zukünftigen Versionen wird es hier jedoch auch
+eine Entwicklung geben.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Für
+das Sammeln der Trainingsdaten gibt es eine eigenes Script, in dem
+man zuerst den aktuellen Zustand (bspw. 1000 = Gedanke: Arm hoch)
+einträgt und dann solange der entsprechende Zustand besteht eine
+Taste drückt. Das Script speichert die Aufnahmen nachdem es beendet
+wurde als CSV-Datei im Unterverzeichnis „samples“.</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745986"></A><A NAME="_Toc29745905"></A>
+<FONT SIZE=3>2.4.4 Random-Forest-Regressor und Features</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Wie
+bereits mehrfach erwähnt, verwenden wir zur Auswertung der Daten den
+in SciKit-Learn enthaltenen Random-Forest-Regressor<A CLASS="sdfootnoteanc" NAME="sdfootnote10anc" HREF="#sdfootnote10sym"><SUP>10</SUP></A>.
+Gründe dafür sind, dass dieser sehr schnell trainiert werden kann
+und vielseitig einsetzbar ist. Wir nutzen aktuell insgesamt 80 (<I>5
+Bänder x 16 Kanäle</I>) Features, von denen jedes eine gewöhnliche
+Float-Zahl ist, die die Signalstärke eines Frequenzbandes an einer
+Elektrode abbildet. Trainiert wird mit zuvor aufgenommenen
+Messwerten, die mit den gleichzeitigen Zuständen verknüpft sind. Je
+nach zu erkennenden Gedanken, verwenden wir zwischen 10.000 und
+40.000 Messwertreihen. Die Aufnahme dieser Messwerte erfolgt über
+ein eigenes Script<A CLASS="sdfootnoteanc" NAME="sdfootnote11anc" HREF="#sdfootnote11sym"><SUP>11</SUP></A>,
+das die Daten dann im CSV-Format abspeichert.</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745987"></A><A NAME="_Toc29745906"></A>
+<FONT SIZE=3>2.4.5 Verwendete externe Bibliotheken</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Da wir
+nicht den gesamten Code für den Random-Forest-Regressor und die
+Web-API schreiben konnten, haben wir externe Bibliotheken genutzt.
+Die wichtigste ist SciKit-Learn, die vorgefertigten Tools für
+maschinelles Lernen zur Verfügung stellt. Der Hauptvorteil ist hier,
+dass die Bibliothek einfach eingebunden und benutzt werden kann. Des
+Weiteren haben wir das API- und Web-Toolkit „Flask“ bzw. „Flask
+Restful“ verwendet, um mit dem Programm kommunizieren zu können.
+Neben diesen haben wir auch für Python-Projekte typische
+Bibliotheken, wie die „Matplotlib“, „Numpy“, „Pandas“ und
+„Scipy“ verwendet, von denen SciKit-Learn abhängig ist. Außerdem
+enthalten sie diverse Tools und Visualisierungen. Alle verwendeten
+Bibliotheken sind in der Datei „requirements.txt“<A CLASS="sdfootnoteanc" NAME="sdfootnote12anc" HREF="#sdfootnote12sym"><SUP>12</SUP></A>
+vermerkt und können von PyPi installiert werden. 
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745988"></A><A NAME="_Toc29745907"></A>
+<FONT SIZE=3>2.4.6 Versionsverwaltung</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Das
+gemeinsame Arbeiten an Softwareprojekten erfordert ein
+Versionsverwaltungssystem, um zum einen Änderungen der verschiedenen
+Entwickler zu überblicken und zum anderen, um im Falle eines nicht
+zu behebenden Fehlers zu vorherigen Version zurückzukehren. Aufgrund
+der weiten Verbreitung und Mangel an Alternativen haben wir Git
+gewählt, mit dem wir bereits zuvor gearbeitet hatten. Da wir unsere
+Konten bei GitHub zu diesem Zeitpunkt bereits erstellt hatten, haben
+wir dort unser Repository ohne großen Aufwand direkt erstellen
+können.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Wir
+haben die Software jedoch erst mit der auf unser neues Headset
+ausgelegten Version auf GitHub gestellt.</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745989"></A><A NAME="_Toc29745908"></A>
+<FONT SIZE=3>2.4.7 Vorherige Versionen</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Vor
+der aktuellen Version hatten wir noch ein Programm, das die Daten
+unseres alten Headsets verarbeitete, jedoch noch nicht in der Lage
+war, Gedanken zu erkennen. Mit dem Schreiben der neuen Version wurde
+die alte vollständig gelöscht, da diese noch nicht konstruiert war,
+um wieder verwendet zu werden. Außerdem haben wir unsere
+Python-Kenntnisse über die Dauer des Projektes so erweitert, dass
+wir deutlich bessere Lösungen fanden, um den Code zu kürzen und in
+mehreren Scripts zu verwenden. <IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_f2c20ace.png" NAME="Freihand 41" ALIGN=LEFT HSPACE=12 WIDTH=1 HEIGHT=1 BORDER=0><IMG SRC="eadbd800ece7491b3980a99de41c9c68_html_aced5dd6.png" NAME="Freihand 35" ALIGN=LEFT HSPACE=12 WIDTH=1 HEIGHT=1 BORDER=0>
+</P>
+<H2 CLASS="western"><A NAME="_Toc29745990"></A><A NAME="_Toc29745909"></A>
+<FONT SIZE=3 STYLE="font-size: 13pt">2.5 Bau/Programmieren der
+Armprothese</FONT></H2>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Ursprünglich
+hatten wir viele Pläne zum Bau einer Armprothese. Die Armprothese
+sollte teils aus einem leicht zu bearbeitenden Material,
+beispielsweise Messing und PLA (PLA ist das Filament, welches häufig
+von FDM-Druckern verwendet wird), bestehen. Teilweise bestanden auch
+Pläne für eine Hydraulik an den Fingern der Prothese, um ein
+kräftiges Zugreifen zu gewährleisten.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Den
+Bau der Armprothese haben wir jedoch unter anderem auf Anraten von
+Jugend-Forscht-Juroren vorerst zurückgestellt. Dafür gab es mehrere
+Gründe. Zum einen stellte sich der Bau einer Armprothese, welche
+einem echten Arm nahekommt, als sehr komplex dar. Da wir bisher auch
+nicht genug Signale bekommen und verarbeiten können, um eine solche
+Prothese zu steuern, ist der Bau einer solchen noch nicht von Nöten.
+Zum anderen ist uns klar geworden, dass wir unser System nicht
+zwingend auf eine Armprothese begrenzen müssen, sondern deutlich
+mehr Möglichkeiten haben, beispielsweise die Steuerung einer Drohne.
+So trafen wir die Entscheidung, vorerst nur eine virtuelle
+Armprothese zu programmieren und für Jugend forscht ein kleines
+Demonstrationsmodell zu bauen.<BR>Dieses Demonstrationsmodell wird
+aus zwei Gelenken bestehen, welche wiederum mit Stepper-Motoren
+angetrieben und von einem ESP8266 angesteuert werden. Die
+Datenübertragung läuft über das im ESP integrierten WiFi-Modul.
+Die Signale, welche die KI ermittelt, werden von einem in C++
+geschriebenen Programm in Steuerungsbefehle umgewandelt, welche
+wiederum analog auf die Motoren übertragen werden.</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><A NAME="_Toc29745991"></A><A NAME="_Toc29745910"></A>
+<BR><BR>
+</P>
+<H2 CLASS="western" STYLE="page-break-before: always"><FONT SIZE=3 STYLE="font-size: 13pt">2.6
+Grober zeitlicher Ablauf unserer Arbeit</FONT></H2>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<TABLE WIDTH=604 CELLPADDING=7 CELLSPACING=0>
+	<COL WIDTH=52>
+	<COL WIDTH=99>
+	<COL WIDTH=411>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=42 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><U><B>2018</B></U></P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>September &amp; Oktober</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Ideenfindungsphase</P>
+			<P CLASS="western" STYLE="margin-bottom: 0in">Erkundung möglicher
+			Hardware</P>
+			<P CLASS="western">Bestellen des OpenBCI-Ganglions</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=28 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>November</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Tests mit neu
+			angekommener Hardware</P>
+			<P CLASS="western">Anmeldung für Jugend forscht 2019</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=9 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Dezember</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Programmieren der
+			ersten Softwareversion (nur Datenfilter)</P>
+			<P CLASS="western" STYLE="margin-bottom: 0in">Schreiben an der
+			Langfassung</P>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=33 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><U><B>2019</B></U></P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Januar</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western">Fertigstellung der Langfassung, erste
+			Vorbereitungen für den Jugend forscht Wettkampf. Weiteres
+			Ausfeilen der Software</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=60 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Februar</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Intensive
+			Vorbereitungen für den Jugend forscht Wettbewerb, Erstellen des
+			Plakates. 
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0in">Software
+			„aufhübschen“.</P>
+			<P CLASS="western">Jugend forscht Wettbewerb</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=68 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>März</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Überlegungen für
+			Weiterentwicklung unseres Systems</P>
+			<UL>
+				<LI><P STYLE="margin-bottom: 0in">16 oder 32 Kanäle?</P>
+			</UL>
+			<P CLASS="western" STYLE="margin-left: 0.04in">Überlegungen,
+			welches Machine-Learning-Toolkit verwendet werden soll und welche
+			Daten es verarbeiten soll.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=28 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>April</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western">Treffen der endgültigen Entscheidungen zur
+			weiteren Verfahrensweise</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=41 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Mai</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Noah Ihlein tritt
+			dem Projekt bei, wird eingeführt. 
+			</P>
+			<P CLASS="western">Antrag für ein Sponsoring von OpenBCI wird
+			gestellt, leider ohne Antwort.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=28 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Juni</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Beantragung von
+			Mikro-Makro-MINT</P>
+			<P CLASS="western">Beginn mit dem Programmieren der Software</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=12 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Juli</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western">Weiterentwicklung der Software.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=29 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>August</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Weiterentwicklung
+			der Software.</P>
+			<P CLASS="western">Warten auf Bestätigung von Mikro-Makro-MINT</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=14 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>September</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Bestätigung von
+			Mikro-Makro-MINT</P>
+			<P CLASS="western">Bestellen der Hardware</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=33 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Oktober</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western">Weiterentwicklung der Software, Bau des
+			Headsets mit OpenBCI „Cyton“</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=32 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>November</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Weiterentwicklung
+			der Software</P>
+			<P CLASS="western">Anmeldung für Jugend forscht</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 HEIGHT=61 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Dezember</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Zusätzlich zum
+			OpenBCI „Cyton“ erhalten wir das „Daisy“, eine Erweiterung
+			von 8 auf 16 Kanäle findet statt</P>
+			<P CLASS="western" STYLE="margin-bottom: 0in">Erweiterung der
+			Software</P>
+			<P CLASS="western">Schreiben der Langfassung</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=52 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><U><B>2020</B></U></P>
+		</TD>
+		<TD WIDTH=99 STYLE="border: none; padding: 0in">
+			<P CLASS="western"><B>Januar</B></P>
+		</TD>
+		<TD WIDTH=411 STYLE="border: none; padding: 0in">
+			<P CLASS="western" STYLE="margin-bottom: 0in">Erweiterung der
+			Software/Trainieren der KI auf drei verschiedene Zustände</P>
+			<P CLASS="western">Fertigstellung der Langfassung</P>
+		</TD>
+	</TR>
+</TABLE>
+<H1 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745992"></A><A NAME="_Toc29745911"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>3.
+Probleme</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Leider
+läuft nicht immer alles wie geplant, immer wieder hatten und haben
+wir mit verschiedenen Problemen zu kämpfen, die den
+Projektfortschritt gefährdeten. 
+</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745993"></A><A NAME="_Toc29745912"></A>
+<FONT SIZE=3>3.1 Hardware</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Im
+Hardwarebereich gab es die meisten und schwierigsten Probleme. So gab
+es oft Verbindungsprobleme zwischen Board und Dongle. Ein anderes
+Problem waren die bereits erwähnten Störsignale, welche durch
+verschiedene elektrische Geräte im Raum verursacht wurden. Ein
+Beispiel hierfür ist ein kaputtes Netzteil eines Computers. Durch
+diese Fehler kamen viele Stunden des Ausprobierens und der
+Fehlersuche zustande. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Größere
+Probleme hatten wir auch als das Headset ausgedruckt werden sollte.
+Dieses war zu groß um in den uns zur Verfügung stehenden Druckern
+ausgedruckt werden können. Der Versuch, das Headset in getrennten
+kleineren Stücken auszudrucken ist fehlgeschlagen. Das Problem wurde
+letztendlich dadurch gelöst, dass das Headset von einem Freund in
+einem größeren FDM-Drucker ausgedruckt wurde.</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745994"></A><A NAME="_Toc29745913"></A>
+<FONT SIZE=3>3.2 Software</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Auch
+softwaretechnisch gab es immer wieder Probleme, zu denen
+hauptsächlich Bugs in der von OpenBCI zur Verfügung gestellten
+GUI-Software zählten, weshalb wir mehrfach auf ältere Versionen
+zurückgreifen mussten. Aufgrund dieser Unzuverlässigkeit planen
+wir, in zukünftigen Versionen eine direkte Verbindung zwischen
+Headset und Computer herzustellen</P>
+<H3 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745995"></A><A NAME="_Toc29745914"></A>
+<FONT SIZE=3>3.3 Sonstiges</FONT></H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Abgesehen
+von den technischen Problemen hatten wir aufgrund der langen
+Lieferzeiten unserer Boards und der Bewerbungszeit für die
+Mikro-Makro-Mint-Unterstützung zwischenzeitlich sehr lange
+Wartezeiten, in welchen wir nicht effektiv arbeiten konnten. Da sich
+alle Gruppenmitglieder nun in der zwölften Stufe der Schule
+befinden, müssen wir uns auch immer mehr mit dem regulären
+Schulstoff beschäftigen, was dazu führt, dass wir uns teilweise
+nicht in dem Maße mit unserem Projekt beschäftigen konnten, wie wir
+es gerne getan hätten.</P>
+<H1 CLASS="western"><A NAME="_Toc29745996"></A><A NAME="_Toc29745915"></A>
+<FONT COLOR="#00000a"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>4.
+Zukunftspläne</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Wir
+hoffen, dass wir unser System auch nach Jugend forscht
+weiterentwickeln können. Dafür benötigen wir vor allem bessere
+Hardware, was einen hohen Kostenaufwand bedeutet. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Mit
+verbesserter Hardware könnten wir die KI auf noch mehr Zustände
+trainieren und somit dann eine richtige Armprothese ansteuern, welche
+es sich dann endlich zu bauen lohnt.</P>
+<H1 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745997"></A><A NAME="_Toc29745916"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>5</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>.
+Ergebnisdiskussion</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Wir
+haben es geschafft unser System so zu entwickeln, dass verschiedene
+Hirnströme voneinander unterschieden werden können. Es bleibt ein
+großes Entwicklungsfeld, dies auf Normalbedingungen mit Bewegung und
+verschiedenen Tätigkeiten auszuweiten und auf verschiedene Geräte,
+wie Armprothesen, zu übertragen. Ungeklärt ist, wie viele
+unterschiedliche Signale maximal gemessen und interpretiert werden
+können, da man mit einem EEG-Gerät nur die Hirnströme der obersten
+2cm der Großhirnrinde ableiten kann und die Messdaten insgesamt
+nicht genau genug sind. Die Lösung für dieses Problem könnte in
+einem noch besseren EEG-Gerät mit noch mehr Kanälen liegen.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H1 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745998"></A><A NAME="_Toc29745917"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>6</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>.
+</B></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Zusammenfassung</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Das
+von uns entwickelte System lässt sich in der Theorie auf viele
+verschiedene Bereiche anwenden, die weit über eine Armprothese
+hinausgehen.<B> </B>Durch unsere lange Planungsphase waren wir in der
+Lage, unsere weitere Vorgehensweise nach Jugend forscht 2019 zu
+diskutieren und nach Lösungen für Probleme suchen. Durch unseren
+Wechsel auf 16 Kanäle und die Anwendung des 10-20-Systems konnten
+wir eine deutlich höhere Messgenauigkeit erreichen als wir
+ursprünglich mit unserem Ganglion-Board mit vier Kanälen hatten.
+Wir haben es geschafft, ein Programm zu entwickeln, welches
+zuverlässig die Daten des EEG-Gerätes aufnehmen und so
+weiterverarbeiten kann, dass eine von uns trainierte KI diese
+erkennt, verarbeitet und entsprechende Signale an das angeschlossene
+Gerät, dem Demonstrationsmodell, leitet.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Da wir
+in der Lage sind, mehr als zwei verschiedene Zustände im Gehirn mit
+unserem EEG-Gerät zu erkennen, haben wir die Erwartungen vieler,
+einschließlich unserer eigener, übertroffen. Das System kann von
+nun an primär durch eine Verbesserung der Hardware-Komponenten
+weiterentwickelt werden, wozu uns allerdings vor allem die
+finanziellen Mittel fehlen.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Alles
+in allem ist unser Projekt in jeder Hinsicht ein Erfolg. Wir hoffen
+darauf, dass wir das von uns entwickelte System trotz verschiedenster
+Hürden weiterentwickeln können und in Zukunft eine richtige
+Armprothese ansteuern können.</P>
+<H1 CLASS="western" ALIGN=JUSTIFY><A NAME="_Toc29745999"></A><A NAME="_Toc29745918"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>7.
+Danksagung</B></FONT></FONT></FONT></H1>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Danken
+möchten wir allen, die es uns ermöglichen unsere Idee zu
+verwirklichen. Vor allem danken wir Dr. Joachim Groß, Lehrer und
+Leiter des Schülerforschungszentrums in Eningen unter Achalm für
+die Betreuung und das finanzielle Management unseres Projekts.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Vielen
+Dank auch an Simon Benezan für die Hilfe unser Headset mit dem
+3D-Drucker auszudrucken.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Außerdem
+danken wir unseren Eltern, die uns über die Dauer des ganzen
+Projektes unterstützt haben.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Des
+Weiteren danken wir der Baden-Württemberg Stiftung für die
+finanzielle Unterstützung innerhalb des Mikro-Makro-MINT-Programmes.
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H1 CLASS="western" ALIGN=JUSTIFY STYLE="page-break-before: always"><A NAME="_Toc29746000"></A><A NAME="_Toc29745919"></A>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>8.
+Abbildungs- und Quellenverzeichnis</B></FONT></FONT></FONT></H1>
+<H2 CLASS="western"><A NAME="_Toc29746001"></A><A NAME="_Toc29745920"></A>
+8.1 Abbildungen</H2>
+<DIV ID="Illustration Index1" DIR="LTR">
+	<P STYLE="margin-bottom: 0in"><BR>
+	</P>
+</DIV>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><A NAME="_Toc29746002"></A><A NAME="_Toc29745921"></A>
+<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-bottom: 0.17in; page-break-before: always">
+8.2 Quellen/Literatur  
+</H2>
+<P CLASS="western" STYLE="margin-bottom: 0.11in">STÖHR, Manfred;
+KRAUS, Regina: Einführung in die klinische Neurophysiologie.
+EMG-EEG-Evozierte Potenziale. Steinkopff Verlag Darmstadt, 2014.</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in">HERRMANN, Björn:
+Methoden der kognitiven Neurowissenschaften –
+Elektroenzephalographie. Leipzig, Deutschland Mai 2014, entnommen am
+02.01.2019.</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in">BERTSCH, Katja: Das
+EEG: Spontan-EEG und EKP, Trier, Deutschland Dezember 2007, entnommen
+am 07.12.2018.</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in">KÜBLER, Andrea und
+NEUPER, Christa: Gehirn-Computer-Schnittstellen (Brain-Computer
+Interfaces): Anwendungen und Perspektiven, entnommen am 02.01.2019 –
+<A HREF="https://www.degruyter.com/view/j/nf.2008.14.issue-2/nf-2008-0205/nf-2008-0205.xml">https://www.degruyter.com/view/j/nf.2008.14.issue-2/nf-2008-0205/nf-2008-0205.xml</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">OpenBCI Documentation,
+entnommen im Oktober 2019 – 
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><A HREF="https://docs.openbci.com/docs/Welcome.html">https://docs.openbci.com/docs/Welcome.html</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in; text-decoration: none">
+<BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0in">OpenBCI GUI, entnommen
+im Oktober 2019 (Version 4.1.3) –</P>
+<P CLASS="western" STYLE="margin-bottom: 0.11in"><A HREF="https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs">https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs</A>
+</P>
+<DIV ID="sdfootnote1">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote1sym" HREF="#sdfootnote1anc">1</A><SUP></SUP>
+	Vgl.: STÖHR, Manfred; KRAUS, Regina: Einführung in die klinische
+	Neurophysiologie.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote2">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote2sym" HREF="#sdfootnote2anc">2</A><SUP></SUP>
+	Vgl.: ebd.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote3">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote3sym" HREF="#sdfootnote3anc">3</A><SUP></SUP>
+	Vgl.: ebd.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote4">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote4sym" HREF="#sdfootnote4anc">4</A><SUP></SUP>
+	Vgl.: ebd.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote5">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote5sym" HREF="#sdfootnote5anc">5</A><SUP></SUP>
+	Vgl.: ebd.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote6">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote6sym" HREF="#sdfootnote6anc">6</A><SUP></SUP>
+	Vgl.: STÖHR, Manfred; KRAUS, Regina: Einführung in die klinische
+	Neurophysiologie.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote7">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote7sym" HREF="#sdfootnote7anc">7</A><SUP></SUP>
+	Vgl. ebd.</FONT></P>
+</DIV>
+<DIV ID="sdfootnote8">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote8sym" HREF="#sdfootnote8anc">8</A><SUP></SUP>
+	SciKit-Learn:	<A HREF="https://scikit-learn.org">https://scikit-learn.org</A></FONT></P>
+</DIV>
+<DIV ID="sdfootnote9">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote9sym" HREF="#sdfootnote9anc">9</A><SUP></SUP><SPAN LANG="en-US">
+	Main-Script: 
+		<A HREF="https://github.com/sfz-eningen/NeuroCTRL/blob/master/api_server.py">https://github.com/sfz-eningen/NeuroCTRL/blob/master/api_server.py</A></SPAN></FONT></P>
+</DIV>
+<DIV ID="sdfootnote10">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote10sym" HREF="#sdfootnote10anc">10</A><SUP></SUP><SPAN LANG="en-US">
+	Random-Forest-Regressor -</SPAN></FONT></P>
+	<P STYLE="margin-bottom: 0in; line-height: 100%">  
+	<FONT SIZE=2><SPAN LANG="en-US"><A HREF="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html</A></SPAN></FONT></P>
+	<P STYLE="margin-bottom: 0in; line-height: 100%">  
+	<FONT SIZE=2><SPAN LANG="en-US"><A HREF="https://github.com/sfz-eningen/NeuroCTRL/blob/master/AI/classes.py">https://github.com/sfz-eningen/NeuroCTRL/blob/master/AI/classes.py</A></SPAN></FONT></P>
+</DIV>
+<DIV ID="sdfootnote11">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote11sym" HREF="#sdfootnote11anc">11</A><SUP></SUP><SPAN LANG="en-US">
+	“record.py” -
+	<A HREF="https://github.com/sfz-eningen/NeuroCTRL/blob/master/record.py">https://github.com/sfz-eningen/NeuroCTRL/blob/master/record.py</A></SPAN></FONT></P>
+</DIV>
+<DIV ID="sdfootnote12">
+	<P STYLE="margin-bottom: 0in; line-height: 100%; page-break-before: always">
+	<FONT SIZE=2><A CLASS="sdfootnotesym" NAME="sdfootnote12sym" HREF="#sdfootnote12anc">12</A><SUP></SUP><SPAN LANG="en-US">
+	PyPi Requirements -
+	<A HREF="https://github.com/sfz-eningen/NeuroCTRL/blob/master/requirements.txt">https://github.com/sfz-eningen/NeuroCTRL/blob/master/requirements.txt</A></SPAN></FONT></P>
+</DIV>
+<DIV TYPE=FOOTER>
+	<TABLE WIDTH=605 CELLPADDING=7 CELLSPACING=0>
+		<COL WIDTH=188>
+		<COL WIDTH=188>
+		<COL WIDTH=188>
+		<TR VALIGN=TOP>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P STYLE="margin-left: -0.08in"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P ALIGN=CENTER><BR>
+				</P>
+			</TD>
+			<TD WIDTH=188 STYLE="border: none; padding: 0in">
+				<P ALIGN=RIGHT STYLE="margin-right: -0.08in"><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+	<P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+	</P>
+</DIV>
+</BODY>
+</HTML>
