@@ -2,7 +2,7 @@
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
   float: left;
-  width: 40%;
+  width: 45%;
   padding: 5px;
 }
 
@@ -107,7 +107,9 @@ Je weiter die Elektroden auf dem Kopf voneinander entfernt sind, desto höher si
 **Bau und Aufbau des EEG-Gerätes**
 ----------------------------------
 
+
 <image src="2020-01-12_Langfassung_WEB_html_938126e3.jpg"  width="40%" id="unipol">
+
 
 <p style="text-align: justify">
 Seit Beginn unseres Projektes haben wir zwei verschiedene EEG-Geräte gebaut.
@@ -115,4 +117,15 @@ Das erste EEG-Gerät war ein einfaches Ganglion-Board mit vier Kanälen von Open
 Nachdem wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen und mit unserer damaligen Software zu verarbeiten, wurde uns bewusst, dass wir mit vier Kanälen nicht genug Daten sammeln können, um dauerhaft zuverlässig Messwerte zu bekommen. Aus diesem Grund wollten wir unser System auf ganze 32 Kanäle erweitern. Dies wäre jedoch ein zu großer Schritt gewesen, da man bereits mit 16 Kanälen sehr gut die von uns gewollte Messgenauigkeit erreichen kann. Daher haben wir uns dazu entschieden vorerst nur auf 16 Kanäle zu erweitern. Die neuen Boards kamen wieder von OpenBCI, zum einen das „Cyton“-Board mit 8 Kanälen und dem „Daisy“-Board, eine Erweiterung für das „Cyton”-Board mit 8 Kanälen. Da wir nun mit einer deutlich höheren Anzahl an Elektroden arbeiteten, konnten wir die Elektroden nicht mehr einzeln an die Kopfhaut drücken. Somit musste ein richtiger „Helm“ hergestellt werden, an dem die Elektroden befestigt werden konnten. Das EEG-Gerät wird von vier Handelsüblichen AA-Batterien betrieben und ist in keiner Weise an das Stromnetz angeschlossen.
 </p>
 
-<image src="2020-01-12_Langfassung_WEB_html_938126e3.jpg" style="margin-left: 30%" width="40%" id="unipol-l">
+<image src="2020-01-12_Langfassung_WEB_html_e60dad19.jpg" width="40%" id="unipol">
+
+Unser zweites EEG-Gerät besteht zu rund 70% aus Teilen, die mit dem 3D-Drucker angefertigt wurden. Die dafür benötigten Modelle sind über die Webseite von OpenBCI frei verfügbar. Nachdem wir das Grundgerüst für das EEG-Gerät hatten drucken lassen, mussten wir darin die Elektrodenhalterungen befestigen. Durch Epoxidharz bekamen diese einen festen Halt. Die Goldelektroden haben wir vorerst an der Außenseite der großen Schrauben befestigt und durch sie hindurch mit einer weiteren Metallschraube mit der speziell beschichteten Trockenelektrode verbunden. Hierbei ergab sich allerdings das Problem, dass die Leitfähigkeit der Metallschrauben weit unter dem erwarteten Wert lag, weshalb die Messwerte zu ungenau waren und viele Störsignale auftraten. Aus diesem Grund haben wir die Elektrodenhalter und Elektroden so umplatziert, dass die Goldelektrode direkt an der Trockenelektrode festgeschraubt wird. Dadurch erhalten wir nun deutlich genauere Messwerte. Für diesen Schritt kam uns zugute, dass es einfach war, die Elektroden vom Headset zu entfernen und in Einzelteile zu zerlegen. Nachdem die Goldelektrode umplatziert war, konnte man alles schnell und einfach wieder zusammenbauen.
+
+<div class="row">
+    <div class="column">
+        <image src="Elektrode.png">
+    </div>
+    <div class="column">
+        <image src="2020-01-12_Langfassung_WEB_html_f7351819.jpg">
+    </div>
+</div>
