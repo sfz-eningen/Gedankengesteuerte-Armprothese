@@ -175,7 +175,7 @@ Wir haben die Software jedoch erst mit der auf unser neues Headset ausgelegten V
 
 Vor der aktuellen Version hatten wir noch ein Programm, das die Daten unseres alten Headsets verarbeitete, jedoch noch nicht in der Lage war, Gedanken zu erkennen. Mit dem Schreiben der neuen Version wurde die alte vollständig gelöscht, da diese noch nicht konstruiert war, um wieder verwendet zu werden. Außerdem haben wir unsere Python-Kenntnisse über die Dauer des Projektes so erweitert, dass wir deutlich bessere Lösungen fanden, um den Code zu kürzen und in mehreren Scripts zu verwenden. 
 
-**Bau/Programmieren der Armprothese**
+***Bau/Programmieren der Armprothese***
 -------------------------------------
 
 Ursprünglich hatten wir viele Pläne zum Bau einer Armprothese. Die Armprothese sollte teils aus einem leicht zu bearbeitenden Material, beispielsweise Messing und PLA (PLA ist das Filament, welches häufig von FDM-Druckern verwendet wird), bestehen. Teilweise bestanden auch Pläne für eine Hydraulik an den Fingern der Prothese, um ein kräftiges Zugreifen zu gewährleisten.
