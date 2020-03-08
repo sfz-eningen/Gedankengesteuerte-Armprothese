@@ -27,6 +27,11 @@
     float: left;
     margin: 5px;
     margin-left: 10px;
+
+img {
+    border: 2px solid #222;
+    border-radius: 8px;
+}
 }
 </style>
 
@@ -43,10 +48,10 @@
 
 <div class="row">
   <div class="column">
-    <img src="2020-01-12_Langfassung_WEB_html_9cb785b0.jpg" alt="Snow" style="width:100%"></image>
+    <img src="2020-01-12_Langfassung_WEB_html_9cb785b0.jpg" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="img_forest.jpg" alt="Jufo Stand" style="width:100%"></image>
+    <img src="img_forest.jpg" alt="Jufo Stand" style="width:100%">
   </div>
 </div>
 
