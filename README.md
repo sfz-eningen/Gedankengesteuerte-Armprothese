@@ -146,5 +146,137 @@ Bei den gestarteten Prozessen handelt es sich genauer um einen Stream-Prozess, d
 
 ```python
 {"data": [Ergebnis1,…,ErgebnisN]}
-````
+```
+
+### **Datensammlung und -verarbeitung**
+
+<p style="text-align: justify">Bei den Daten, die wir von unserem Headset empfangen handelt, es sich um die Stärke fünf verschiedener Frequenzbänder für jede einzelne Elektrode, die von der für Europa typischen Netzfrequenz (50 Hz), sowie anderen typischen Störquellen bereinigt werden. Außerdem werden wir in zukünftigen Versionen noch die Beschleunigungsdaten als Features für die RFRs einbeziehen. Zum gegenwärtigen Zeitpunkt verwenden wir zum Herausfiltern der Störungen und zur Umwandlung der Spannungswerte in Frequenzbänder noch die OpenBCI-GUI Software, da sich eine direkte Verbindung mit dem Board als überaus schwierig herausstellte. In zukünftigen Versionen wird es hier jedoch auch eine Entwicklung geben.
+Für das Sammeln der Trainingsdaten gibt es eine eigenes Script, in dem man zuerst den aktuellen Zustand (bspw. 1000 = Gedanke: Arm hoch) einträgt und dann solange der entsprechende Zustand besteht eine Taste drückt. Das Script speichert die Aufnahmen nachdem es beendet wurde als CSV-Datei im Unterverzeichnis „samples“.</p>
+
+### **Random-Forest-Regressor und Features**
+
+Wie bereits mehrfach erwähnt, verwenden wir zur Auswertung der Daten den in SciKit-Learn enthaltenen Random-Forest-Regressor . Gründe dafür sind, dass dieser sehr schnell trainiert werden kann und vielseitig einsetzbar ist. Wir nutzen aktuell insgesamt 80 (5 Bänder x 16 Kanäle) Features, von denen jedes eine gewöhnliche Float-Zahl ist, die die Signalstärke eines Frequenzbandes an einer Elektrode abbildet. Trainiert wird mit zuvor aufgenommenen Messwerten, die mit den gleichzeitigen Zuständen verknüpft sind. Je nach zu erkennenden Gedanken, verwenden wir zwischen 10.000 und 40.000 Messwertreihen. Die Aufnahme dieser Messwerte erfolgt über ein eigenes Script , das die Daten dann im CSV-Format abspeichert.
+
+### **Verwendete externe Bibliotheken**
+
+Da wir nicht den gesamten Code für den Random-Forest-Regressor und die Web-API schreiben konnten, haben wir externe Bibliotheken genutzt. Die wichtigste ist SciKit-Learn, die vorgefertigten Tools für maschinelles Lernen zur Verfügung stellt. Der Hauptvorteil ist hier, dass die Bibliothek einfach eingebunden und benutzt werden kann. Des Weiteren haben wir das API- und Web-Toolkit „Flask“ bzw. „Flask Restful“ verwendet, um mit dem Programm kommunizieren zu können. Neben diesen haben wir auch für Python-Projekte typische Bibliotheken, wie die „Matplotlib“, „Numpy“, „Pandas“ und „Scipy“ verwendet, von denen SciKit-Learn abhängig ist. Außerdem enthalten sie diverse Tools und Visualisierungen. Alle verwendeten Bibliotheken sind in der Datei „requirements.txt“  vermerkt und können von PyPi installiert werden. 
+
+### **Versionsverwaltung**
+
+Das gemeinsame Arbeiten an Softwareprojekten erfordert ein Versionsverwaltungssystem, um zum einen Änderungen der verschiedenen Entwickler zu überblicken und zum anderen, um im Falle eines nicht zu behebenden Fehlers zu vorherigen Version zurückzukehren. Aufgrund der weiten Verbreitung und Mangel an Alternativen haben wir Git gewählt, mit dem wir bereits zuvor gearbeitet hatten. Da wir unsere Konten bei GitHub zu diesem Zeitpunkt bereits erstellt hatten, haben wir dort unser Repository ohne großen Aufwand direkt erstellen können.
+Wir haben die Software jedoch erst mit der auf unser neues Headset ausgelegten Version auf GitHub gestellt.
+
+### **Vorherige Versionen**
+
+Vor der aktuellen Version hatten wir noch ein Programm, das die Daten unseres alten Headsets verarbeitete, jedoch noch nicht in der Lage war, Gedanken zu erkennen. Mit dem Schreiben der neuen Version wurde die alte vollständig gelöscht, da diese noch nicht konstruiert war, um wieder verwendet zu werden. Außerdem haben wir unsere Python-Kenntnisse über die Dauer des Projektes so erweitert, dass wir deutlich bessere Lösungen fanden, um den Code zu kürzen und in mehreren Scripts zu verwenden. 
+
+***
+
+**Bau/Programmieren der Armprothese**
+-------------------------------------
+
+Ursprünglich hatten wir viele Pläne zum Bau einer Armprothese. Die Armprothese sollte teils aus einem leicht zu bearbeitenden Material, beispielsweise Messing und PLA (PLA ist das Filament, welches häufig von FDM-Druckern verwendet wird), bestehen. Teilweise bestanden auch Pläne für eine Hydraulik an den Fingern der Prothese, um ein kräftiges Zugreifen zu gewährleisten.
+Den Bau der Armprothese haben wir jedoch unter anderem auf Anraten von Jugend-Forscht-Juroren vorerst zurückgestellt. Dafür gab es mehrere Gründe. Zum einen stellte sich der Bau einer Armprothese, welche einem echten Arm nahekommt, als sehr komplex dar. Da wir bisher auch nicht genug Signale bekommen und verarbeiten können, um eine solche Prothese zu steuern, ist der Bau einer solchen noch nicht von Nöten. Zum anderen ist uns klar geworden, dass wir unser System nicht zwingend auf eine Armprothese begrenzen müssen, sondern deutlich mehr Möglichkeiten haben, beispielsweise die Steuerung einer Drohne. So trafen wir die Entscheidung, vorerst nur eine virtuelle Armprothese zu programmieren und für Jugend forscht ein kleines Demonstrationsmodell zu bauen.
+Dieses Demonstrationsmodell wird aus zwei Gelenken bestehen, welche wiederum mit Stepper-Motoren angetrieben und von einem ESP8266 angesteuert werden. Die Datenübertragung läuft über das im ESP integrierten WiFi-Modul. Die Signale, welche die KI ermittelt, werden von einem in C++ geschriebenen Programm in Steuerungsbefehle umgewandelt, welche wiederum analog auf die Motoren übertragen werden.
+
+***
+
+<br><br>
+
+**Probleme**
+============
+
+**Hardware**
+
+Im Hardwarebereich gab es die meisten und schwierigsten Probleme. So gab es oft Verbindungsprobleme zwischen Board und Dongle. Ein anderes Problem waren die bereits erwähnten Störsignale, welche durch verschiedene elektrische Geräte im Raum verursacht wurden. Ein Beispiel hierfür ist ein kaputtes Netzteil eines Computers. Durch diese Fehler kamen viele Stunden des Ausprobierens und der Fehlersuche zustande. 
+Größere Probleme hatten wir auch als das Headset ausgedruckt werden sollte. Dieses war zu groß um in den uns zur Verfügung stehenden Druckern ausgedruckt werden können. Der Versuch, das Headset in getrennten kleineren Stücken auszudrucken ist fehlgeschlagen. Das Problem wurde letztendlich dadurch gelöst, dass das Headset von einem Freund in einem größeren FDM-Drucker ausgedruckt wurde.
+
+***
+
+**Software**
+------------
+
+Auch softwaretechnisch gab es immer wieder Probleme, zu denen hauptsächlich Bugs in der von OpenBCI zur Verfügung gestellten GUI-Software zählten, weshalb wir mehrfach auf ältere Versionen zurückgreifen mussten. Aufgrund dieser Unzuverlässigkeit planen wir, in zukünftigen Versionen eine direkte Verbindung zwischen Headset und Computer herzustellen
+
+***
+
+**Sonstiges**
+------------
+
+Abgesehen von den technischen Problemen hatten wir aufgrund der langen Lieferzeiten unserer Boards und der Bewerbungszeit für die Mikro-Makro-Mint-Unterstützung zwischenzeitlich sehr lange Wartezeiten, in welchen wir nicht effektiv arbeiten konnten. Da sich alle Gruppenmitglieder nun in der zwölften Stufe der Schule befinden, müssen wir uns auch immer mehr mit dem regulären Schulstoff beschäftigen, was dazu führt, dass wir uns teilweise nicht in dem Maße mit unserem Projekt beschäftigen konnten, wie wir es gerne getan hätten.
+
+<br><br>
+
+***
+
+**Zukunftspläne**
+=================
+
+Wir hoffen, dass wir unser System auch nach Jugend forscht weiterentwickeln können. Dafür benötigen wir vor allem bessere Hardware, was einen hohen Kostenaufwand bedeutet. 
+Mit verbesserter Hardware könnten wir die KI auf noch mehr Zustände trainieren und somit dann eine richtige Armprothese ansteuern, welche es sich dann endlich zu bauen lohnt.
+
+<br><br>
+
+***
+
+**Ergebnisdiskussion**
+======================
+
+Wir haben es geschafft unser System so zu entwickeln, dass verschiedene Hirnströme voneinander unterschieden werden können. Es bleibt ein großes Entwicklungsfeld, dies auf Normalbedingungen mit Bewegung und verschiedenen Tätigkeiten auszuweiten und auf verschiedene Geräte, wie Armprothesen, zu übertragen. Ungeklärt ist, wie viele unterschiedliche Signale maximal gemessen und interpretiert werden können, da man mit einem EEG-Gerät nur die Hirnströme der obersten 2cm der Großhirnrinde ableiten kann und die Messdaten insgesamt nicht genau genug sind. Die Lösung für dieses Problem könnte in einem noch besseren EEG-Gerät mit noch mehr Kanälen liegen.
+
+<br><br>
+
+**Zusammenfassung**
+===================
+
+Das von uns entwickelte System lässt sich in der Theorie auf viele verschiedene Bereiche anwenden, die weit über eine Armprothese hinausgehen. Durch unsere lange Planungsphase waren wir in der Lage, unsere weitere Vorgehensweise nach Jugend forscht 2019 zu diskutieren und nach Lösungen für Probleme suchen. Durch unseren Wechsel auf 16 Kanäle und die Anwendung des 10-20-Systems konnten wir eine deutlich höhere Messgenauigkeit erreichen als wir ursprünglich mit unserem Ganglion-Board mit vier Kanälen hatten. Wir haben es geschafft, ein Programm zu entwickeln, welches zuverlässig die Daten des EEG-Gerätes aufnehmen und so weiterverarbeiten kann, dass eine von uns trainierte KI diese erkennt, verarbeitet und entsprechende Signale an das angeschlossene Gerät, dem Demonstrationsmodell, leitet.
+Da wir in der Lage sind, mehr als zwei verschiedene Zustände im Gehirn mit unserem EEG-Gerät zu erkennen, haben wir die Erwartungen vieler, einschließlich unserer eigener, übertroffen. Das System kann von nun an primär durch eine Verbesserung der Hardware-Komponenten weiterentwickelt werden, wozu uns allerdings vor allem die finanziellen Mittel fehlen.
+Alles in allem ist unser Projekt in jeder Hinsicht ein Erfolg. Wir hoffen darauf, dass wir das von uns entwickelte System trotz verschiedenster Hürden weiterentwickeln können und in Zukunft eine richtige Armprothese ansteuern können.
+
+<br><br>
+
+**Danksagung**
+==============
+
+Danken möchten wir allen, die es uns ermöglichen unsere Idee zu verwirklichen. Vor allem danken wir Dr. Joachim Groß, Lehrer und Leiter des Schülerforschungszentrums in Eningen unter Achalm für die Betreuung und das finanzielle Management unseres Projekts.
+Vielen Dank auch an Simon Benezan für die Hilfe unser Headset mit dem 3D-Drucker auszudrucken.
+Außerdem danken wir unseren Eltern, die uns über die Dauer des ganzen Projektes unterstützt haben.
+Des Weiteren danken wir der Baden-Württemberg Stiftung für die finanzielle Unterstützung innerhalb des Mikro-Makro-MINT-Programmes. 
+
+<br><br>
+
+**Abbildungs- und Quellenverzeichnis**
+======================================
+
+**Abbildungen**
+---------------
+>**Abbildung 1 - Gruppenbild**<br>
+Aufgenommen von Thorsten Beimgraben, am 31.12.2019 
+
+>**Abbildung 2 - Jugend forscht Stand**<br>
+Aufgenommen von Maximilian Menzel, am 14.02.2020
+
+>**Abbildung 3 - Headset**<br>
+Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
+
+>**Abbildung 4 - Unipolare Referenzschaltung**<br>
+https://www.sciencedirect.com/science/article/abs/pii/S143948471730056X  
+
+>**Abbildung 5 - 10-20 System nach Jaspers**<br>
+https://www.bci2000.org/mediawiki/index.php/User_Tutorial:EEG_Measurement_Setup 
+
+>**Abbildung 6 - Platzierung der Elektroden auf dem Ultracortex Mk-IV**<br>
+Screenshot aus der OpenBCI GUI, aufgenommen von Maximilian Menzel, am 10.01.2020
+
+>**Abbildung 7 - Ganglion Board**<br>
+Aufgenommen von Frederik Beimgraben, 2018
+
+>**Abbildung 8 - Cyton Board mit Daisy Erweiterung**<br>
+Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
+
+>**Abbildung 9 - Schraubelektrode für das Headset**<br>
+Aufgenommen von Maximilian Menzel, am 08.01.2020
+
+>**Abbildung 10 - Vollständiges Headset**<br>
+Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 
