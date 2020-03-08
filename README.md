@@ -192,6 +192,7 @@ Dieses Demonstrationsmodell wird aus zwei Gelenken bestehen, welche wiederum mit
 ============
 
 **Hardware**
+------------
 
 Im Hardwarebereich gab es die meisten und schwierigsten Probleme. So gab es oft Verbindungsprobleme zwischen Board und Dongle. Ein anderes Problem waren die bereits erwähnten Störsignale, welche durch verschiedene elektrische Geräte im Raum verursacht wurden. Ein Beispiel hierfür ist ein kaputtes Netzteil eines Computers. Durch diese Fehler kamen viele Stunden des Ausprobierens und der Fehlersuche zustande. 
 Größere Probleme hatten wir auch als das Headset ausgedruckt werden sollte. Dieses war zu groß um in den uns zur Verfügung stehenden Druckern ausgedruckt werden können. Der Versuch, das Headset in getrennten kleineren Stücken auszudrucken ist fehlgeschlagen. Das Problem wurde letztendlich dadurch gelöst, dass das Headset von einem Freund in einem größeren FDM-Drucker ausgedruckt wurde.
@@ -231,6 +232,8 @@ Wir haben es geschafft unser System so zu entwickeln, dass verschiedene Hirnstr�
 
 <br><br>
 
+***
+
 **Zusammenfassung**
 ===================
 
@@ -239,6 +242,8 @@ Da wir in der Lage sind, mehr als zwei verschiedene Zustände im Gehirn mit unse
 Alles in allem ist unser Projekt in jeder Hinsicht ein Erfolg. Wir hoffen darauf, dass wir das von uns entwickelte System trotz verschiedenster Hürden weiterentwickeln können und in Zukunft eine richtige Armprothese ansteuern können.
 
 <br><br>
+
+***
 
 **Danksagung**
 ==============
@@ -249,6 +254,8 @@ Außerdem danken wir unseren Eltern, die uns über die Dauer des ganzen Projekte
 Des Weiteren danken wir der Baden-Württemberg Stiftung für die finanzielle Unterstützung innerhalb des Mikro-Makro-MINT-Programmes. 
 
 <br><br>
+
+***
 
 **Abbildungs- und Quellenverzeichnis**
 ======================================
@@ -265,10 +272,10 @@ Aufgenommen von Maximilian Menzel, am 14.02.2020
 Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 
 >**Abbildung 4 - Unipolare Referenzschaltung**<br>
-https://www.sciencedirect.com/science/article/abs/pii/S143948471730056X  
+[https://www.sciencedirect.com/science/article/abs/pii/S143948471730056X](https://www.sciencedirect.com/science/article/abs/pii/S143948471730056X)
 
 >**Abbildung 5 - 10-20 System nach Jaspers**<br>
-https://www.bci2000.org/mediawiki/index.php/User_Tutorial:EEG_Measurement_Setup 
+[https://www.bci2000.org/mediawiki/index.php/User_Tutorial:EEG_Measurement_Setup](https://www.bci2000.org/mediawiki/index.php/User_Tutorial:EEG_Measurement_Setup)
 
 >**Abbildung 6 - Platzierung der Elektroden auf dem Ultracortex Mk-IV**<br>
 Screenshot aus der OpenBCI GUI, aufgenommen von Maximilian Menzel, am 10.01.2020
@@ -285,3 +292,22 @@ Aufgenommen von Maximilian Menzel, am 08.01.2020
 >**Abbildung 10 - Vollständiges Headset**<br>
 Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 
+***
+
+**Quellen/Literatur**
+---------------------
+
+
+>STÖHR, Manfred; KRAUS, Regina: Einführung in die klinische Neurophysiologie. EMG-EEG-Evozierte Potenziale. Steinkopff Verlag Darmstadt, 2014.
+
+>HERRMANN, Björn: Methoden der kognitiven Neurowissenschaften – Elektroenzephalographie. Leipzig, Deutschland Mai 2014, entnommen am 02.01.2019.
+
+>BERTSCH, Katja: Das EEG: Spontan-EEG und EKP, Trier, Deutschland Dezember 2007, entnommen am 07.12.2018.
+
+>KÜBLER, Andrea und NEUPER, Christa: Gehirn-Computer-Schnittstellen (Brain-Computer Interfaces): Anwendungen und Perspektiven, entnommen am 02.01.2019 – [https://www.degruyter.com/view/j/nf.2008.14.issue-2/nf-2008-0205/nf-2008-0205.xml](https://www.degruyter.com/view/j/nf.2008.14.issue-2/nf-2008-0205/nf-2008-0205.xml)
+
+>OpenBCI Documentation, entnommen im Oktober 2019 – 
+[https://docs.openbci.com/docs/Welcome.html](https://docs.openbci.com/docs/Welcome.html)
+
+>OpenBCI GUI, entnommen im Oktober 2019 (Version 4.1.3) –
+[https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs](https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs)
