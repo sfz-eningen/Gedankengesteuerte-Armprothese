@@ -150,7 +150,7 @@ Dieses Script startet mehrere Prozesse, die untereinander kommunizieren können.
 Bei den gestarteten Prozessen handelt es sich genauer um einen Stream-Prozess, der die ankommenden Daten vom Headset umwandelt und speichert, sowie den API-Prozess. Der API-Prozess liest die letzten paar Werte reagierend auf eine Web-Anfrage aus und analysiert sie dann mit den zuvor im Hauptprozess erstellten RFRs. Das Ergebnis der Analyse wird dann als dict folgender Form über eine Web-Response zurückgegeben. </p>
 
 ```python
-{"data": [Ergebnis1,…,ErgebnisN]}
+{"data": [Ergebnis1,...,ErgebnisN]}
 ```
 
 ### **Datensammlung und -verarbeitung**
