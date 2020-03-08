@@ -184,12 +184,13 @@ Ursprünglich hatten wir viele Pläne zum Bau einer Armprothese. Die Armprothese
 Den Bau der Armprothese haben wir jedoch unter anderem auf Anraten von Jugend-Forscht-Juroren vorerst zurückgestellt. Dafür gab es mehrere Gründe. Zum einen stellte sich der Bau einer Armprothese, welche einem echten Arm nahekommt, als sehr komplex dar. Da wir bisher auch nicht genug Signale bekommen und verarbeiten können, um eine solche Prothese zu steuern, ist der Bau einer solchen noch nicht von Nöten. Zum anderen ist uns klar geworden, dass wir unser System nicht zwingend auf eine Armprothese begrenzen müssen, sondern deutlich mehr Möglichkeiten haben, beispielsweise die Steuerung einer Drohne. So trafen wir die Entscheidung, vorerst nur eine virtuelle Armprothese zu programmieren und für Jugend forscht ein kleines Demonstrationsmodell zu bauen.
 Dieses Demonstrationsmodell wird aus zwei Gelenken bestehen, welche wiederum mit Stepper-Motoren angetrieben und von einem ESP8266 angesteuert werden. Die Datenübertragung läuft über das im ESP integrierten WiFi-Modul. Die Signale, welche die KI ermittelt, werden von einem in C++ geschriebenen Programm in Steuerungsbefehle umgewandelt, welche wiederum analog auf die Motoren übertragen werden.
 
-***
-
 <br><br>
+
+***
 
 **Probleme**
 ============
+
 
 **Hardware**
 ------------
