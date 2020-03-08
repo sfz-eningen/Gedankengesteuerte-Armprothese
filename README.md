@@ -62,14 +62,14 @@ img {
 **Einleitung**
 =============
 
-**Ideenfindung**
+***Ideenfindung***
 ----------------
 
 <p style="text-align: justify">Zu Beginn des letzten Schuljahres überlegten wir uns ein Projekt, an welchem wir im Schülerforschungszentrum arbeiten wollten. Wir haben uns verschiedene Problembereiche angesehen und wir haben gemerkt, dass wir gerne etwas machen möchten, was sowohl mit Menschen als auch mit Technik zu tun hat. Durch Zufall hat Frederik EEG-Geräte und deren Einsatzbereiche im Internet kennengelernt. Durch Recherche haben wir entdeckt, dass voll funktionsfähige (Arm-) Prothesen bisher nur unter speziellen Bedingungen einsetzbar sind. So müssen beispielsweise bei einem Unfall mit Verlust eines Armes die Nervenenden im Arm intakt bleiben, damit eine Prothese angeschlossen werden kann. Des Weiteren werden große Operationen fällig, um eine spezielle, extra angefertigte Armprothese mit dem Körper und Gehirn zu verbinden. All dies ist natürlich auch mit hohen Kosten verbunden. So haben wir uns dazu entschlossen, eine Armprothese zu bauen, welche mit den Möglichkeiten eines EEG-Gerätes arbeitet. Dadurch sollen alle bestehenden Probleme gelöst werden. In den letzten Monaten ist uns bewusst geworden, dass wir unser System nicht nur auf Armprothesen, sondern auf jede beliebige Art von elektrotechnischen Geräten übertragen können, beispielsweise Drohnen. </p>
 
 ***
 
-**Wie möchten wir unser Vorhaben realisieren?**
+***Wie möchten wir unser Vorhaben realisieren?***
 -----------------------------------------------
 
 <p style="text-align: justify">Die Möglichkeit unser Projekt zu realisieren, bekommen wir durch das Schülerforschungszentrum in Eningen. Wir erhalten dort neben finanzieller Unterstützung auch Beratung von Lehrern. Außerdem werden wir finanziell durch das Mikro-Makro-MINT-Programm in Baden-Württemberg unterstützt. Des Weiteren haben wir Zugriff auf eine Werkstatt, Computer und auch einen 3D-Drucker. Uns stehen verschiedenste Arbeitsmaterialen zur Verfügung. Aufgaben, wie z.B. Programmieren oder Planung betreiben wir aufgrund des hohen Zeitaufwandes nicht nur im SFZ, sondern auch in der Schule, oder Zuhause über Online-Sprachchats. Durch Open-Source Projekte, wie OpenBCI erhalten wir einigermaßen kostengünstigen Zugriff auf EEG-Hardware und haben die Möglichkeit, deren Firmware einfach zu bearbeiten und schnell passende Software zu programmieren. Mithilfe des EEG-Gerätes möchten wir unsere Hirnströme während bestimmter Gedanken messen, um später mit diesen die Prothese anzusteuern. Die Daten des EEG-Gerätes werden von einer eigens programmierten Software geordnet. Mit diesen Daten kann dann ein neuronales Netz trainiert werden, das bereits trainierte und wiederholt auftretende Muster erkennen kann. Die Ergebnisse des neuronalen Netzes können schließlich zur Steuerung der Prothese genutzt werden. Da wir aktuell keinen Zugriff auf eine hochentwickelte bewegliche Armprothese haben, werden wir zunächst eine simulierte Armprothese oder ein Demonstrationsmodell steuern.</p>
@@ -81,13 +81,13 @@ img {
 **Vorgehensweise, Materialien und Methodik**
 ============================================
 
-**Unsere allgemeine Vorgehensweise**
+***Unsere allgemeine Vorgehensweise***
 ------------------------------------
 <p style="text-align: justify">Zu Beginn unseres Projekts haben wir hauptsächlich jede Woche freitags im Schüler-Forschungs-Zentrum in Eningen gearbeitet. Dort haben wir Zugriff auf eine voll ausgestattete Werkstadt, Computer, 3D-Drucker und Arbeitsmaterialien. Nachteil ist dabei die lange An- und Abfahrtszeit, welche insgesamt über zwei Stunden dauert. Über viele Wochen hinweg hat sich die Arbeit immer weiter nach Hause oder auf freie Zeiten in der Schule verlagert. Vor allem beim Programmieren der Software waren wir nicht auf das SFZ angewiesen, über das Projektmanagement-Tool „Git“ konnten wir alle immer den aktuellen Code auf unsere Computer/Laptops laden. Über das Sprachchat-Programm Discord konnten wir miteinander kommunizieren. Mithilfe von TeamViewer konnten wir auf die Computer des anderen zugreifen und live sehen, was auf dem Bildschirm angezeigt wird. Dies war besonders nützlich, wenn Frederik, Maximilian oder Noah beim Programmieren geholfen hat. Aktuell arbeiten wir circa die Hälfte der Zeit von zu Hause aus. Unser Betreuer im SFZ hat es uns möglich gemacht, einen Schlüssel für das Gebäude zu bekommen, wodurch wir nicht mehr an Freitage gebunden sind und jederzeit das SFZ aufsuchen können. So ist ein Mix aus verschiedenen Arbeitsstandorten entstanden, was vor allem unsere Produktivität stark gefördert hat.</p>
 
 ***
 
-**Funktionsweise eines EEG-Gerätes**
+***Funktionsweise eines EEG-Gerätes***
 ------------------------------------
 
 ### **Allgemeines**
@@ -108,7 +108,7 @@ img {
 ***
 
 
-**Bau und Aufbau des EEG-Gerätes**
+***Bau und Aufbau des EEG-Gerätes***
 ----------------------------------
 
 
@@ -136,7 +136,7 @@ Nachdem wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen und 
 
 ***
 
-**Entwicklung und Funktion der Software**
+***Entwicklung und Funktion der Software***
 -----------------------------------------
 
 ### **Wahl der Programmiersprachen und Arbeitsteilung**
@@ -192,7 +192,7 @@ Dieses Demonstrationsmodell wird aus zwei Gelenken bestehen, welche wiederum mit
 ============
 
 
-**Hardware**
+***Hardware***
 ------------
 
 Im Hardwarebereich gab es die meisten und schwierigsten Probleme. So gab es oft Verbindungsprobleme zwischen Board und Dongle. Ein anderes Problem waren die bereits erwähnten Störsignale, welche durch verschiedene elektrische Geräte im Raum verursacht wurden. Ein Beispiel hierfür ist ein kaputtes Netzteil eines Computers. Durch diese Fehler kamen viele Stunden des Ausprobierens und der Fehlersuche zustande. 
@@ -200,14 +200,14 @@ Größere Probleme hatten wir auch als das Headset ausgedruckt werden sollte. Di
 
 ***
 
-**Software**
+***Software***
 ------------
 
 Auch softwaretechnisch gab es immer wieder Probleme, zu denen hauptsächlich Bugs in der von OpenBCI zur Verfügung gestellten GUI-Software zählten, weshalb wir mehrfach auf ältere Versionen zurückgreifen mussten. Aufgrund dieser Unzuverlässigkeit planen wir, in zukünftigen Versionen eine direkte Verbindung zwischen Headset und Computer herzustellen
 
 ***
 
-**Sonstiges**
+***Sonstiges***
 ------------
 
 Abgesehen von den technischen Problemen hatten wir aufgrund der langen Lieferzeiten unserer Boards und der Bewerbungszeit für die Mikro-Makro-Mint-Unterstützung zwischenzeitlich sehr lange Wartezeiten, in welchen wir nicht effektiv arbeiten konnten. Da sich alle Gruppenmitglieder nun in der zwölften Stufe der Schule befinden, müssen wir uns auch immer mehr mit dem regulären Schulstoff beschäftigen, was dazu führt, dass wir uns teilweise nicht in dem Maße mit unserem Projekt beschäftigen konnten, wie wir es gerne getan hätten.
