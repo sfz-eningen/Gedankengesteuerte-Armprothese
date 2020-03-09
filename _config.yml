@@ -3,7 +3,7 @@ remote_theme: higgsbosoncodes/forty-jekyll-theme
 
 # site settings
 title: NeuroCTRL
-subtitle: SFZ Eningen
+subtitle: by SFZ Eningen
 email: beimgraben8@gmail.com
 description: Eine durch EEG gesteuerte Armprothese
 baseurl: "/" # the subpath of your site, e.g. /blog
