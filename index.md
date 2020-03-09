@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: homent
 title: Home
 subtitle: Kurzfassung
 description: Grobe Einführung zum Projekt
