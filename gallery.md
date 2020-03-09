@@ -3,7 +3,7 @@ layout: post
 title: Galerie
 description: Bilder zum Projekt
 nav-menu: true
-image: 2020-01-12_Langfassung_WEB_html_938126e3.jpg
+image: /2020-01-12_Langfassung_WEB_html_938126e3.jpg
 ---
 
 ![](2020-01-12_Langfassung_WEB_html_9cb785b0.jpg)
