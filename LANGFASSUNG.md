@@ -6,54 +6,6 @@ image: 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
 nav-menu: true
 ---
 
-<style>
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 45%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-#unipol {
-    border: 2px solid #222;
-    border-radius: 8px;
-    float: right;
-    margin: 5px;
-    margin-left: 10px;
-}
-
-#unipol-l {
-    border: 2px solid #222;
-    border-radius: 8px;
-    float: left;
-    margin: 5px;
-    margin-left: 10px;
-
-}
-
-#icon {
-    border: 2px transparent;
-    border-radius: 8px;
-    float: left;
-    margin: 5px;
-    margin-right: 10px;
-    height: 1em;
-
-}
-
-img {
-    border: 2px solid #222;
-    border-radius: 8px;
-}
-</style>
-
 ***
 
 **Einleitung**
@@ -89,7 +41,7 @@ img {
 
 ### **Allgemeines**
 
-<image src="2020-01-12_Langfassung_WEB_html_5bb9a16b.png"  width="40%" id="unipol"></image>
+<image src="2020-01-12_Langfassung_WEB_html_5bb9a16b.png"></image>
 
 <p style="text-align: justify">Das EEG-Gerät (Elektroenzephalographie-Gerät) wurde bereits im Jahr 1929 durch H. Berger entwickelt und wird bis heute beispielsweise bei der Hirntoddiagnostik oder der Diagnose von Epilepsien eingesetzt. Es wird dabei die Spannungsdifferenz zwischen zwei Elektroden gemessen bzw. abgeleitet. Das OpenBCI-System ist auf eine sogenannte Referenzableitung bzw. unipolare Referenzschaltung ausgelegt. Das bedeutet, dass die spannungsaktiven Elektroden auf dem Kopf mit einer elektrisch inaktiven Referenzelektrode verglichen werden. Diese kann mittig auf dem Kopf oder am Ohr platziert werden. Theoretisch könnte man die Referenzelektrode auch unterhalb des Kopfes anbringen, dabei bekäme man allerdings Probleme mit sogenannten Artefakten. Artefakte sind Messdaten, die nicht durch Hirnaktivität entstehen, beispielsweise durch die Bewegung eines Armes oder statische Ladungen, welche unter anderem durch Reibung des Arms auf einem Pullover entstehen können. Wir haben aus diesem Grund unsere Referenzelektroden am Ohr platziert. Eigentlich ist vorgesehen, dass je Gehirnhälfte eine Referenzelektrode getragen wird, allerdings hatte das OpenBCI-System Probleme mit dem Erkennen von zwei Ohrelektroden. Deshalb haben wir beschlossen diese zusammenzuschließen und nun gemeinsam für alle Elektroden auf dem Kopf zu verwenden. Der Vorteil in der unipolaren Referenzschaltung liegt darin, dass die Amplituden der einzelnen Ableitpunkte besser miteinander zu vergleichen sind bzw. einzeln ausgegeben werden, was für die Funktion der künstlichen Intelligenz (KI) besser ist. Der Nachteil liegt darin, dass Artefakte häufiger und stärker auftreten können. Da wir uns beim Trainieren der KI so wenig wie möglich bewegen, sollte dies dabei allerdings kaum ein Problem darstellen. Bei einer späteren Verwendung wird die KI Artefakte größtenteils ignorieren, da immer mehrere Datenreihen gleichzeitig verarbeitet werden.</p>
 
@@ -97,7 +49,7 @@ img {
 ### **Platzierung der Elektroden**
 
 
-<image src="2020-01-12_Langfassung_WEB_html_8974670a.png"  width="40%" id="unipol"></image>
+<image src="2020-01-12_Langfassung_WEB_html_8974670a.png"></image>
 
 <p style="text-align: justify">Je weiter die Elektroden auf dem Kopf voneinander entfernt sind, desto höher sind die Spannungsdifferenzen . Aus diesem Grund sollten die Elektroden alle ungefähr denselben Abstand voneinander haben. Von OpenBCI wird für die Platzierung der Elektroden das 10-20-System nach Jaspers  vorgeschlagen, welches international gültig ist. Nach einigen Recherchen haben wir uns dazu entschieden, dieses System so zu übernehmen, da für uns so die genausten Ableitungen möglich sind. Das 10-20-System bekommt seinen Namen durch die Art und Weise wie die Elektroden auf dem Kopf platziert werden. So wird der Kopf in Prozentabschnitte aufgeteilt. Dies findet im Groben zum einen vom Nasion zum Inion statt, zum anderen vom linken bis zum rechten Ohr. Die Elektroden werden nun vom ausgehend Nasion in Richtung der Ohren bis zum Inion verteilt. Dies geschieht zuerst in einem Abschnitt von 10%, anschließend vier Mal 20% und zu guter Letzt noch einmal 10%. So kommen je Kopfseite (rechts und links) 100% zusammen. Dasselbe geschieht bei den Elektroden, die vom Nasion über den Kopf Richtung Inion platziert werden. Genauso verfährt man bei den Elektroden, die vom linken zum rechten Ohr verteilt werden. Die CZ, T7, und T8-Elektroden werden dabei mehrfach bedacht. Zwischen diesen Elektroden können im Abstand von 10% oder 20% weitere Elektroden platziert werden. Wir haben Elektroden an folgenden Positionen platziert und als beistehenden Kanal festgelegt. <code>(Hierbei steht F = frontal, Z = Zentral, T = temporal, P = parietal, O = okzipital, K = Kanal auf Board): Fp1-K1, Fp2-K2, F7-K9, F8-K10, T7-K13, T8-K14, P7-K5, P8-K6, O1-K7, O2-K8, F3-K11, F4-K12, C3-K3, C4-K4, P3-K15, P4-K16</code> Unsere Elektroden sind also um den Kopf herum und auf halber Höhe zwischen Ohren und der Oberseite des Kopfes angebracht.</p>
 
@@ -109,14 +61,14 @@ img {
 ----------------------------------
 
 
-<image src="2020-01-12_Langfassung_WEB_html_938126e3.jpg"  width="40%" id="unipol"></image>
+<image src="2020-01-12_Langfassung_WEB_html_938126e3.jpg"></image>
 
 
 <p style="text-align: justify">Seit Beginn unseres Projektes haben wir zwei verschiedene EEG-Geräte gebaut.
 Das erste EEG-Gerät war ein einfaches Ganglion-Board mit vier Kanälen von OpenBCI, einem amerikanischen Unternehmen, dass sich mit der Entwicklung von EEG-Geräten beschäftigt und gleichzeitig entsprechende Bauteile verkauft. Wir bestellten uns das OpenBCI Ganglion-Board, Goldelektroden und Ten20-Leitpaste. Der Zusammenbau dieser Teile gestaltete sich als sehr einfach und es wurde zusätzlich nur eine Kappe zum Anbringen der Elektroden am Kopf, ein Gehäuse für das Board und eine Klammer benötigt, um die Referenzelektrode am Ohr zu befestigen. Wir haben das OpenBCI Ganglion gewählt, da es nicht allzu teuer, aber modifizierbar ist und ebenfalls viel frei verfügbarer Code zur Ansteuerung vorhanden ist. Jeder Teil der Firmware ist frei verfügbar und da auch die Pläne zum Herstellen der Boards dabei sind, könnten wir später mit unserem Code kompatible Boards mit mehr Kanälen selbst herstellen. Dies haben wir jedoch unterlassen, da es nicht sehr einfach ist, die Boards selbst herzustellen und wir Sorge hatten, dass darauf die Software möglicherweise nicht funktioniert. 
 Nachdem wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen und mit unserer damaligen Software zu verarbeiten, wurde uns bewusst, dass wir mit vier Kanälen nicht genug Daten sammeln können, um dauerhaft zuverlässig Messwerte zu bekommen. Aus diesem Grund wollten wir unser System auf ganze 32 Kanäle erweitern. Dies wäre jedoch ein zu großer Schritt gewesen, da man bereits mit 16 Kanälen sehr gut die von uns gewollte Messgenauigkeit erreichen kann. Daher haben wir uns dazu entschieden vorerst nur auf 16 Kanäle zu erweitern. Die neuen Boards kamen wieder von OpenBCI, zum einen das „Cyton“-Board mit 8 Kanälen und dem „Daisy“-Board, eine Erweiterung für das „Cyton”-Board mit 8 Kanälen. Da wir nun mit einer deutlich höheren Anzahl an Elektroden arbeiteten, konnten wir die Elektroden nicht mehr einzeln an die Kopfhaut drücken. Somit musste ein richtiger „Helm“ hergestellt werden, an dem die Elektroden befestigt werden konnten. Das EEG-Gerät wird von vier Handelsüblichen AA-Batterien betrieben und ist in keiner Weise an das Stromnetz angeschlossen.</p>
 
-<image src="2020-01-12_Langfassung_WEB_html_e60dad19.jpg" width="40%" id="unipol"></image>
+<image src="2020-01-12_Langfassung_WEB_html_e60dad19.jpg"></image>
 
 <p style="text-align: justify">Unser zweites EEG-Gerät besteht zu rund 70% aus Teilen, die mit dem 3D-Drucker angefertigt wurden. Die dafür benötigten Modelle sind über die Webseite von OpenBCI frei verfügbar. Nachdem wir das Grundgerüst für das EEG-Gerät hatten drucken lassen, mussten wir darin die Elektrodenhalterungen befestigen. Durch Epoxidharz bekamen diese einen festen Halt. Die Goldelektroden haben wir vorerst an der Außenseite der großen Schrauben befestigt und durch sie hindurch mit einer weiteren Metallschraube mit der speziell beschichteten Trockenelektrode verbunden. Hierbei ergab sich allerdings das Problem, dass die Leitfähigkeit der Metallschrauben weit unter dem erwarteten Wert lag, weshalb die Messwerte zu ungenau waren und viele Störsignale auftraten. Aus diesem Grund haben wir die Elektrodenhalter und Elektroden so umplatziert, dass die Goldelektrode direkt an der Trockenelektrode festgeschraubt wird. Dadurch erhalten wir nun deutlich genauere Messwerte. Für diesen Schritt kam uns zugute, dass es einfach war, die Elektroden vom Headset zu entfernen und in Einzelteile zu zerlegen. Nachdem die Goldelektrode umplatziert war, konnte man alles schnell und einfach wieder zusammenbauen.</p>
 
