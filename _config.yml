@@ -5,7 +5,7 @@ remote_theme: higgsbosoncodes/forty-jekyll-theme
 title: NeuroCTRL
 subtitle: by SFZ Eningen
 email: beimgraben8@gmail.com
-description: Eine durch EEG gesteuerte Armprothese
+description: ENtwicklung einer durch EEG gesteuerten Armprothese
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Frederik Beimgraben
