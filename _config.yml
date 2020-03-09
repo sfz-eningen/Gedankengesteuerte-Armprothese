@@ -2,10 +2,10 @@
 remote_theme: higgsbosoncodes/forty-jekyll-theme
 
 # site settings
-title: Forty
-subtitle: by HTML5 UP
+title: NeuroCTRL
+subtitle: SFZ Eningen
 email: beimgraben8@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+description: Eine durch EEG gesteuerte Armprothese
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Frederik Beimgraben
