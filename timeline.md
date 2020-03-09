@@ -4,4 +4,5 @@ title: Timeline
 description: Zeitlicher Ablauf
 image: timeline.jpg
 nav-menu: true
+show_tile: true
 ---
