@@ -1,3 +1,10 @@
+---
+layout: post
+title: Langfassung
+description: Genaue Informationen zum Projekt
+image: assets/images/banner.jpg
+---
+
 <style>
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
