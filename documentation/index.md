@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: post
 title: Softwaredokumentation
 subtitle: Details zur Software
 description: Details zur Software
