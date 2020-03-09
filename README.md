@@ -28,10 +28,21 @@
     margin: 5px;
     margin-left: 10px;
 
+}
+
+#icon {
+    border: 2px transparent;
+    border-radius: 8px;
+    float: left;
+    margin: 5px;
+    margin-right: 10px;
+    height: 1em;
+
+}
+
 img {
     border: 2px solid #222;
     border-radius: 8px;
-}
 }
 </style>
 
@@ -314,6 +325,6 @@ Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 **Links**
 =========
 
->Software
->>Github-Seite
->>
+> Software
+>>  
+>>  [<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image><p color=#ffffff>Github-Seite</p>](https://www.github.com/sfz-eningen/NeuroCTRL)
