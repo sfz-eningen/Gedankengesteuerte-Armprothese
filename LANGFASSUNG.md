@@ -3,6 +3,7 @@ layout: post
 title: Langfassung
 description: Genaue Informationen zum Projekt
 image: 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
+nav-menu: true
 ---
 
 <style>
