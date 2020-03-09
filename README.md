@@ -35,10 +35,6 @@ img {
 }
 </style>
 
-**Gedankengesteuerte Armprothese**
-==================================
-> ***Ein Projekt von Frederik Beimgraben, Noah Ihlein und Maximilian Menzel***
-
 **Kurzfassung**
 ---------------
 
@@ -312,3 +308,12 @@ Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 
 >OpenBCI GUI, entnommen im Oktober 2019 (Version 4.1.3) –
 [https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs](https://docs.openbci.com/docs/06Software/01-OpenBCISoftware/GUIDocs)
+
+***
+
+**Links**
+=========
+
+>Software
+>>Github-Seite
+>>
