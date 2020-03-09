@@ -1,6 +1,8 @@
 ---
 layout: post
 title: NeuroCTRL ist jetzt online!
+description: Unser Projekt hat seine eigene Webseite!
+image: /rocket.png
 show_tile: true
 nav-menu: false
 ---
