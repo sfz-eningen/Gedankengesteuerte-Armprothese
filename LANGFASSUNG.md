@@ -2,7 +2,7 @@
 layout: post
 title: Langfassung
 description: Genaue Informationen zum Projekt
-image: https://github.com/sfz-eningen/Gedankengesteuerte-Armprothese/blob/master/2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
+image: 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
 ---
 
 <style>
