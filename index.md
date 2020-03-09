@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Kurzfassung
+title: Home
 description: Grobe Einführung zum Projekt
 image: 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg, 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
 ---
