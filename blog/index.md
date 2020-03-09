@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: landing
 title: NeuroCTRL Blog
 landing-title: Unsere Updates und Posts findet ihr hier!
 show_tile: false
