@@ -2,7 +2,7 @@
 layout: post
 title: Kurzfassung
 description: Eine kurze Einführung in unser Projekt.
-nav-menu: false
+nav-menu: true
 show_tile: false
 ---
 
