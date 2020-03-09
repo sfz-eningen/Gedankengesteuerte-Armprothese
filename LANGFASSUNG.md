@@ -254,7 +254,7 @@ Des Weiteren danken wir der Baden-Württemberg Stiftung für die finanzielle Unt
 
 ***
 
-**Abbildungs- und Quellenverzeichnis**
+**Quellenverzeichnis**
 ======================================
 
 **Abbildungen**
