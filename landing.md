@@ -2,5 +2,6 @@
 layout: allposts
 title: Übersicht
 description: Alle Seiten
-nav-menu: true
+nav-menu: false
+show_tile: false
 ---
