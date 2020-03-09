@@ -2,6 +2,6 @@
 layout: post
 title: Timeline
 description: Zeitlicher Ablauf
-image: /timeline.jpg
+image: timeline.jpg
 nav-menu: true
 ---
