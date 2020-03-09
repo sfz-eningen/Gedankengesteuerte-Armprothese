@@ -9,7 +9,7 @@ description: ENtwicklung einer durch EEG gesteuerten Armprothese
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Frederik Beimgraben
-street_address: Muehleweg 13
+street_address: (SFZ) Muehleweg 13
 city: Eningen unter Achalm
 state: BW
 zip_code: 72800
