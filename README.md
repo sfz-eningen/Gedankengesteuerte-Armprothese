@@ -141,7 +141,7 @@ Nachdem wir mit diesem EEG-Gerät in der Lage waren, Hirnströme auszulesen und 
 
 ### **Programmstruktur**
 
-<p style="text-align: justify">Der Übersichtlichkeit halber, haben wir unser Programm in Subbibliotheken gegliedert, die jeweils einen Aufgabenbereich, wie z.B. die KI-bezogenen Teile des Programms enthalten. Außerdem kann man so die programmierten Klassen von mehreren Scripts aus verwenden. Die letztendliche Programmabfolge befindet sich im Script `„api_server.py“`.  
+<p style="text-align: justify">Der Übersichtlichkeit halber, haben wir unser Programm in Subbibliotheken gegliedert, die jeweils einen Aufgabenbereich, wie z.B. die KI-bezogenen Teile des Programms enthalten. Außerdem kann man so die programmierten Klassen von mehreren Scripts aus verwenden. Die letztendliche Programmabfolge befindet sich im Script <code>„api_server.py“</code>.  
 Dieses Script startet mehrere Prozesse, die untereinander kommunizieren können. Außerdem erstellt und trainiert er den Random-Forest-Regressor (RFR) mit zuvor aufgenommenen Daten. Sobald alle Prozesse gestartet, und die RFRs trainiert sind, läuft das Script in einen Endlosschleife und wartet auf eine Unterbrechung durch den Nutzer, woraufhin es alle Subprozesse beenden kann. 
 Bei den gestarteten Prozessen handelt es sich genauer um einen Stream-Prozess, der die ankommenden Daten vom Headset umwandelt und speichert, sowie den API-Prozess. Der API-Prozess liest die letzten paar Werte reagierend auf eine Web-Anfrage aus und analysiert sie dann mit den zuvor im Hauptprozess erstellten RFRs. Das Ergebnis der Analyse wird dann als dict folgender Form über eine Web-Response zurückgegeben. </p>
 
@@ -152,7 +152,7 @@ Bei den gestarteten Prozessen handelt es sich genauer um einen Stream-Prozess, d
 ### **Datensammlung und -verarbeitung**
 
 <p style="text-align: justify">Bei den Daten, die wir von unserem Headset empfangen handelt, es sich um die Stärke fünf verschiedener Frequenzbänder für jede einzelne Elektrode, die von der für Europa typischen Netzfrequenz (50 Hz), sowie anderen typischen Störquellen bereinigt werden. Außerdem werden wir in zukünftigen Versionen noch die Beschleunigungsdaten als Features für die RFRs einbeziehen. Zum gegenwärtigen Zeitpunkt verwenden wir zum Herausfiltern der Störungen und zur Umwandlung der Spannungswerte in Frequenzbänder noch die OpenBCI-GUI Software, da sich eine direkte Verbindung mit dem Board als überaus schwierig herausstellte. In zukünftigen Versionen wird es hier jedoch auch eine Entwicklung geben.
-Für das Sammeln der Trainingsdaten gibt es eine eigenes Script, in dem man zuerst den aktuellen Zustand (bspw. 1000 = Gedanke: Arm hoch) einträgt und dann solange der entsprechende Zustand besteht eine Taste drückt. Das Script speichert die Aufnahmen nachdem es beendet wurde als CSV-Datei im Unterverzeichnis „samples“.</p>
+Für das Sammeln der Trainingsdaten gibt es eine eigenes Script, in dem man zuerst den aktuellen Zustand (bspw. 1000 = Gedanke: Arm hoch) einträgt und dann solange der entsprechende Zustand besteht eine Taste drückt. Das Script speichert die Aufnahmen nachdem es beendet wurde als CSV-Datei im Unterverzeichnis <code>„samples“.</code></p>
 
 ### **Random-Forest-Regressor und Features**
 
@@ -160,7 +160,7 @@ Für das Sammeln der Trainingsdaten gibt es eine eigenes Script, in dem man zuer
 
 ### **Verwendete externe Bibliotheken**
 
-<p style="text-align: justify">Da wir nicht den gesamten Code für den Random-Forest-Regressor und die Web-API schreiben konnten, haben wir externe Bibliotheken genutzt. Die wichtigste ist SciKit-Learn, die vorgefertigten Tools für maschinelles Lernen zur Verfügung stellt. Der Hauptvorteil ist hier, dass die Bibliothek einfach eingebunden und benutzt werden kann. Des Weiteren haben wir das API- und Web-Toolkit „Flask“ bzw. „Flask Restful“ verwendet, um mit dem Programm kommunizieren zu können. Neben diesen haben wir auch für Python-Projekte typische Bibliotheken, wie die „Matplotlib“, „Numpy“, „Pandas“ und „Scipy“ verwendet, von denen SciKit-Learn abhängig ist. Außerdem enthalten sie diverse Tools und Visualisierungen. Alle verwendeten Bibliotheken sind in der Datei „requirements.txt“  vermerkt und können von PyPi installiert werden. </p>
+<p style="text-align: justify">Da wir nicht den gesamten Code für den Random-Forest-Regressor und die Web-API schreiben konnten, haben wir externe Bibliotheken genutzt. Die wichtigste ist SciKit-Learn, die vorgefertigten Tools für maschinelles Lernen zur Verfügung stellt. Der Hauptvorteil ist hier, dass die Bibliothek einfach eingebunden und benutzt werden kann. Des Weiteren haben wir das API- und Web-Toolkit „Flask“ bzw. „Flask Restful“ verwendet, um mit dem Programm kommunizieren zu können. Neben diesen haben wir auch für Python-Projekte typische Bibliotheken, wie die „Matplotlib“, „Numpy“, „Pandas“ und „Scipy“ verwendet, von denen SciKit-Learn abhängig ist. Außerdem enthalten sie diverse Tools und Visualisierungen. Alle verwendeten Bibliotheken sind in der Datei <code>„requirements.txt“</code>  vermerkt und können von PyPi installiert werden. </p>
 
 ### **Versionsverwaltung**
 
