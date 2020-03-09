@@ -6,4 +6,4 @@ show_tile: false
 nav-menu: true
 ---
 
-Wir werden hier hin und wieder Updates zum Projekt veröffentlichen. Wenn ihr fragen zum Projekt habt, könnt ihr uns über das Formular unten auf der Webseite erreichen.
+Wir werden hier hin und wieder Updates zum Projekt veröffentlichen. Wenn ihr fragen zum Projekt habt, könnt ihr uns über das Formular unten auf der Webseite erreichen. 
