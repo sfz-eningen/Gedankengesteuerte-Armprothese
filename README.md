@@ -325,14 +325,15 @@ Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 **Links**
 =========
 
-> **Software**
-> --------------
->>  
->> ***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> NeuroCTRL Software](https://www.github.com/sfz-eningen/NeuroCTRL)***
->> ---
->> ***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> SFZ-Github-Seite](https://www.github.com/sfz-eningen)***
->> ---
-> **Allgemein**
-> --------------
->> ***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> SFZ Webseite](https://www.sfz-bw.de)***
->> ---
+**Software**
+--------------
+
+***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> NeuroCTRL Software](https://www.github.com/sfz-eningen/NeuroCTRL)***
+
+***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> SFZ-Github-Seite](https://www.github.com/sfz-eningen)***
+
+
+**Allgemein**
+--------------
+
+***[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image> SFZ Webseite](https://www.sfz-bw.de)***
