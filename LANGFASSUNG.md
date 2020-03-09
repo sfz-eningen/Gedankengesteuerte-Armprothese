@@ -6,6 +6,8 @@ image: 2020-01-12_Langfassung_WEB_html_9cb785b0.jpg
 nav-menu: true
 ---
 
+![2020-01-12_Langfassung_WEB_html_9cb785b0.jpg](2020-01-12_Langfassung_WEB_html_9cb785b0.jpg)
+
 <style>
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
