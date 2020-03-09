@@ -328,5 +328,5 @@ Aufgenommen von Linus Beimgraben und Maximilian Menzel, am 28.12.2019
 > Software
 >>  
 >> **[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image><p color=#ffffff>NeuroCTRL Software</p>](https://www.github.com/sfz-eningen/NeuroCTRL)**
->> **[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image><p color="#ffffff">SFZ-Github-Seite</p>](https://www.github.com/sfz-eningen/NeuroCTRL)**
+>> **[<image src="GitHub-Mark-Light-120px-plus.png" style="margin-bottom: 3px;" id="icon"></image><p color="#ffffff">SFZ-Github-Seite</p>](https://www.github.com/sfz-eningen)**
 
